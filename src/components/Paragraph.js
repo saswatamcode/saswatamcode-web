@@ -1,7 +1,7 @@
-import styled from "styled-components/macro";
+import styled from "styled-components/macro"
 
 const Paragraph = styled.p`
-width: 100%;
+  width: 100%;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -14,11 +14,11 @@ width: 100%;
     color: black;
     text-decoration: none;
     font-weight: bold;
-    
+
     :hover {
       border-bottom: 2px solid black;
     }
   }
-`;
+`
 
-export default Paragraph;
+export default Paragraph

@@ -5,7 +5,7 @@ import LandingImage from "../images/LandingImage.png"
 import RainbowScrollbar from "../images/RainbowScrollbar.png"
 import ReactJobBoard from "../images/ReactJobBoard.png"
 import DataScience from "../images/DataScience.jpg"
-import InstaBot from "../images/Instabot.jpg"
+import InstaBot from "../images/InstaBot.png"
 import ReactPokedex from "../images/ReactPokedex.png"
 import CpuActivity from "../images/CpuActivity.png"
 import Layout from "../components/Layout"
@@ -20,6 +20,7 @@ import Paragraph from "../components/Paragraph"
 import Project from "../components/Project"
 import { breakpoints } from "../components/Media"
 import Footer from "../components/Footer"
+import Resume from "../assets/Resume.pdf"
 
 const SVGContainer = styled.div`
   bottom: 0;
@@ -29,6 +30,33 @@ const SVGContainer = styled.div`
   width: 100%;
   height: auto;
   padding: 0;
+`
+const ResumeBtn = styled.button`
+  width: 200px;
+  height: 70px;
+  border-radius: 50px;
+  color: white;
+  font-size: 24px;
+  font-weight: 600;
+  background-image: linear-gradient(
+    to right,
+    #6253e1,
+    #852d91,
+    #a3a1ff,
+    #f24645
+  );
+  box-shadow: 0 4px 15px 0 rgba(126, 52, 161, 0.75);
+  background-size: 300% 100%;
+
+  transition: all 0.4s ease-in-out;
+  :hover {
+    background-position: 100% 0;
+
+    transition: all 0.4s ease-in-out;
+  }
+  :focus {
+    outline: none;
+  }
 `
 
 const Container = styled.div`
@@ -80,7 +108,6 @@ const SkillTable = styled.div`
   }
 `
 
-
 export default function IndexPage() {
   useEffect(() => {
     console.log(`
@@ -90,9 +117,9 @@ export default function IndexPage() {
 # #  ##      ## # # ### #   ###     
 # #                              #  
     
-    `);
-        console.log('This website was designed and built by Saswata Mukherjee.');
-  });
+    `)
+    console.log("This website was designed and built by Saswata Mukherjee.")
+  })
   return (
     <>
       <Layout>
@@ -104,7 +131,7 @@ export default function IndexPage() {
             integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
             crossorigin="anonymous"
           />
-          
+
           <meta
             name="title"
             content="Saswata Mukherjee - Web Developer - saswatamcode"
@@ -195,6 +222,7 @@ export default function IndexPage() {
             also interested in learning new technologies that allow me to craft
             new experiences.
           </Paragraph>
+          <a href={Resume} target="_blank"><ResumeBtn>Get Resume</ResumeBtn></a>
         </Container>
 
         <Container>

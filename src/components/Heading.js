@@ -1,8 +1,8 @@
-import styled from "styled-components/macro";
-import { breakpoints } from "../components/Media";
+import styled from "styled-components/macro"
+import { breakpoints } from "../components/Media"
 
 const Heading = styled.h1`
-margin-top: -70px;
+  margin-top: -70px;
   margin-left: 30px;
   font-style: normal;
   font-weight: 900;
@@ -18,6 +18,6 @@ margin-top: -70px;
   > span {
     color: #b4e0e8;
   }
-`;
+`
 
-export default Heading;
+export default Heading

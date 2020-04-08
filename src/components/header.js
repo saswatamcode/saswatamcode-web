@@ -24,6 +24,5 @@ const Header = styled.div`
   animation: ${Gradient} 15s ease infinite;
   height: 700px;
   position: relative;
-  
 `
 export default Header

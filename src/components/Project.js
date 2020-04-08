@@ -13,12 +13,10 @@ const ProjectBox = styled.div`
     a {
       border-bottom: 2px solid black;
     }
-    
   }
   @media only screen and (max-width: 600px) {
     height: 350px;
-}
-  
+  }
 `
 
 const ProjectImage = styled.img`
