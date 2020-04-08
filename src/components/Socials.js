@@ -68,7 +68,7 @@ export default function Socials() {
           <Icon className="fa fa-instagram" />
         </a>
         <a
-          title="Twitter"
+          title="Medium"
           target="_blank"
           rel="noreferrer"
           href="https://medium.com/@saswatamcode"

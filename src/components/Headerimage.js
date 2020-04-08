@@ -1,7 +1,6 @@
 import React from "react"
 import styled from "styled-components/macro"
 import Image from "../images/HeaderImage.svg"
-import { breakpoints } from "./Media"
 
 const HeadImg = styled.img`
     height: 350px;
