@@ -1,5 +1,5 @@
 import React from "react"
-import styled, { keyframes } from "styled-components/macro"
+import styled from "styled-components/macro"
 
 const SocialsContainer = styled.div`
   width: 30%;
@@ -26,6 +26,7 @@ const Icon = styled.i`
   margin-left: 15px;
   transform: scale(1.5);
   float: left;
+  transition: 0.2s;
   :hover {
     transform: scale(2);
   }
@@ -38,7 +39,7 @@ export default function Socials() {
         <a
           title="GitHub Repositories"
           target="_blank"
-          rel="noreferrer"
+          rel="noopener noreferrer"
           href="https://github.com/saswatamcode"
         >
           <Icon className="fa fa-github" />
@@ -46,7 +47,7 @@ export default function Socials() {
         <a
           title="LinkedIn"
           target="_blank"
-          rel="noreferrer"
+          rel="noopener noreferrer"
           href="https://www.linkedin.com/in/saswatamcode/"
         >
           <Icon className="fa fa-linkedin" />
@@ -54,7 +55,7 @@ export default function Socials() {
         <a
           title="Twitter"
           target="_blank"
-          rel="noreferrer"
+          rel="noopener noreferrer"
           href="https://twitter.com/saswatamcode"
         >
           <Icon className="fa fa-twitter" />
@@ -62,7 +63,7 @@ export default function Socials() {
         <a
           title="Instagram"
           target="_blank"
-          rel="noreferrer"
+          rel="noopener noreferrer"
           href="https://www.instagram.com/saswatamcode/"
         >
           <Icon className="fa fa-instagram" />
@@ -70,7 +71,7 @@ export default function Socials() {
         <a
           title="Medium"
           target="_blank"
-          rel="noreferrer"
+          rel="noopener noreferrer"
           href="https://medium.com/@saswatamcode"
         >
           <Icon className="fa fa-medium" />

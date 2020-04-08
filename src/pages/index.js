@@ -1,8 +1,13 @@
-import React from "react"
-import { Link } from "gatsby"
-import styled, { keyframes } from "styled-components/macro"
+import React, { useEffect } from "react"
+import styled from "styled-components/macro"
 import { Helmet } from "react-helmet"
 import LandingImage from "../images/LandingImage.png"
+import RainbowScrollbar from "../images/RainbowScrollbar.png"
+import ReactJobBoard from "../images/ReactJobBoard.png"
+import DataScience from "../images/DataScience.jpg"
+import InstaBot from "../images/Instabot.jpg"
+import ReactPokedex from "../images/ReactPokedex.png"
+import CpuActivity from "../images/CpuActivity.png"
 import Layout from "../components/Layout"
 import Header from "../components/Header"
 import "../index.css"
@@ -14,7 +19,7 @@ import Socials from "../components/Socials"
 import Paragraph from "../components/Paragraph"
 import Project from "../components/Project"
 import { breakpoints } from "../components/Media"
-
+import Footer from "../components/Footer"
 
 const SVGContainer = styled.div`
   bottom: 0;
@@ -24,27 +29,26 @@ const SVGContainer = styled.div`
   width: 100%;
   height: auto;
   padding: 0;
-`;
+`
 
 const Container = styled.div`
   display: block;
   width: 90%;
   margin: 30px;
   padding-bottom: 170px;
-`;
+`
 
 const SubContainer = styled.div`
-    margin: 0px 0;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    border: 1px solid red;
-    justify-content: space-evenly;
-    @media (min-width: ${breakpoints.mobileMax}) {
-        flex-wrap: nowrap;
-    }
-`;
+  margin: 0px 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  @media (min-width: ${breakpoints.mobileMax}) {
+    flex-wrap: nowrap;
+  }
+`
 
 const SkillTable = styled.div`
   width: 100%;
@@ -74,9 +78,21 @@ const SkillTable = styled.div`
       color: #b4e1e7;
     }
   }
-`;
+`
+
 
 export default function IndexPage() {
+  useEffect(() => {
+    console.log(`
+# #  #       #  #                #  
+# #         ### ### ### ### ###  #  
+###  #       #  # # ##  #   ##   #  
+# #  ##      ## # # ### #   ###     
+# #                              #  
+    
+    `);
+        console.log('This website was designed and built by Saswata Mukherjee.');
+  });
   return (
     <>
       <Layout>
@@ -88,7 +104,7 @@ export default function IndexPage() {
             integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
             crossorigin="anonymous"
           />
-
+          
           <meta
             name="title"
             content="Saswata Mukherjee - Web Developer - saswatamcode"
@@ -126,7 +142,7 @@ export default function IndexPage() {
         </Helmet>
 
         <Header>
-          <LogoImage />
+          <LogoImage color="white" />
           <HeaderImage />
           <Socials />
           <HeaderText />
@@ -138,7 +154,7 @@ export default function IndexPage() {
             >
               <path
                 fill="#fff"
-                fill-opacity="1"
+                fillOpacity="1"
                 d="M0,256L40,245.3C80,235,160,213,240,192C320,171,400,149,480,122.7C560,96,640,64,720,69.3C800,75,880,117,960,165.3C1040,213,1120,267,1200,245.3C1280,224,1360,128,1400,80L1440,32L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"
               ></path>
             </svg>
@@ -160,7 +176,7 @@ export default function IndexPage() {
             <a
               title="DSCKIIT"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               href="http://dsckiit.in/"
             >
               Developer Student Clubs, KIIT{" "}
@@ -169,7 +185,7 @@ export default function IndexPage() {
             <a
               title="Mozilla BBSR"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               href="https://mozillabbsr.me/"
             >
               {" "}
@@ -180,11 +196,9 @@ export default function IndexPage() {
             new experiences.
           </Paragraph>
         </Container>
-       
+
         <Container>
-          <Heading>
-            My Skills
-          </Heading>
+          <Heading>My Skills</Heading>
           <Paragraph>
             As a full-stack web developer I take special interest in various JS
             frameworks. Apart from my college curriculum, I've taken a number of
@@ -192,7 +206,7 @@ export default function IndexPage() {
             <a
               title="The Complete 2020 Web Development Bootcamp"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               href="https://www.udemy.com/course/the-complete-web-development-bootcamp/"
             >
               The Complete 2020 Web Development Bootcamp
@@ -201,7 +215,7 @@ export default function IndexPage() {
             <a
               title="Complete Python3 Bootcamp"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               href="https://www.udemy.com/course/complete-python-bootcamp/"
             >
               Complete Python3 Bootcamp
@@ -210,7 +224,7 @@ export default function IndexPage() {
             <a
               title="React: The Complete Guide"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               href="https://www.udemy.com/react-the-complete-guide-incl-redux/"
             >
               React: the Complete Guide
@@ -219,7 +233,7 @@ export default function IndexPage() {
             <a
               title="Flutter Bootcamp"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               href="https://www.udemy.com/course/flutter-bootcamp-with-dart/"
             >
               Flutter Bootcamp with Dart
@@ -228,7 +242,7 @@ export default function IndexPage() {
             <a
               title="iOS 13 App Development"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               href="https://www.udemy.com/course/ios-13-app-development-bootcamp/"
             >
               iOS 13 App Development Bootcamp
@@ -272,16 +286,60 @@ export default function IndexPage() {
         <Container>
           <Heading>What I've Been Working On</Heading>
           <Paragraph>
-            I like to learn new things by doing projects using them. Take a look
-            at the stuff I've worked on. 
+            I like to learn new things by doing projects using them. I also love
+            writing technical articles about topics I'm passionate about on{" "}
+            <a
+              title="Medium"
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://medium.com/@saswatamcode"
+            >
+              Medium
+            </a>
+            . Take a look at the stuff I've worked on.
           </Paragraph>
           <SubContainer>
-            <Project image={LandingImage} name="Testing" desc="The Greatest project ever built in the name of lve"></Project>
-            <Project image={LandingImage} name="Testing" desc="The Greatest project ever built in the name of lve"></Project>
-            <Project image={LandingImage} name="Testing" desc="The Greatest project ever built in the name of lve"></Project>
-
+            <Project
+              image={RainbowScrollbar}
+              name="React Rainbow ScrollBar"
+              desc="A simple npm package to get an animated rainbow scrollbar for your React app."
+              link="https://github.com/saswatamcode/react-rainbow-scrollbar"
+            ></Project>
+            <Project
+              image={ReactJobBoard}
+              name="React Job Board"
+              desc="A web application which lists various jobs using the Github Jobs API. Built using React, Node.js, Express and Redis."
+              link="https://github.com/saswatamcode/react_job_board"
+            ></Project>
+            <Project
+              image={DataScience}
+              name="Data Science API"
+              desc="This is a RESTful API built using Flask and Scikit-Learn. It provides a host of Classification and Regression algorithms."
+              link="https://github.com/saswatamcode/DataScienceAPI"
+            ></Project>
+          </SubContainer>
+          <SubContainer>
+            <Project
+              image={ReactPokedex}
+              name="React Pokédex"
+              desc="A web application which lists pokémon data from PokeAPI.co. Made using React and material-ui."
+              link="https://github.com/saswatamcode/ReactPokedex"
+            ></Project>
+            <Project
+              image={InstaBot}
+              name="InstaBOT"
+              desc="A simple Instagram bot which gives you the list of people you follow and aren't followed by. Made using Selenium."
+              link="https://github.com/saswatamcode/InstaBOT"
+            ></Project>
+            <Project
+              image={CpuActivity}
+              name="CPU Activity Monitor"
+              desc="A simple cross-platform desktop app made using Electron the shows a chart about your CPU activity."
+              link="https://github.com/saswatamcode/CPU-activity-monitor"
+            ></Project>
           </SubContainer>
         </Container>
+        <Footer />
       </Layout>
     </>
   )

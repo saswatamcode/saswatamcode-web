@@ -6,11 +6,10 @@ const LogoImg = styled.div`
     padding-top: 20px;
     padding-left: 5%;
     font-weight: 600;
-    color: white;
 `;
 
-export default function LogoImage() {
+export default function LogoImage({color}) {
     return(
-        <LogoImg>SM.</LogoImg>
+        <LogoImg style={{color: color}}>SM.</LogoImg>
     );
 }
