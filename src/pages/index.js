@@ -141,7 +141,7 @@ export default function IndexPage() {
             content="Technology has always piqued my interest. Ever since I started learning how to code, I've loved the idea of building something new that people can experience all around the web."
           />
           <meta property="og:type" content="website" />
-          <meta property="og:url" content="https://saswatamcode.github.io/" />
+          <meta property="og:url" content="https://saswatamcode.tech/" />
           <meta
             property="og:title"
             content="Saswata Mukherjee - Web Developer - saswatamcode"
@@ -152,10 +152,7 @@ export default function IndexPage() {
           />
           <meta property="og:image" content={LandingImage} />
           <meta property="twitter:card" content="summary_large_image" />
-          <meta
-            property="twitter:url"
-            content="https://saswatamcode.github.io/"
-          />
+          <meta property="twitter:url" content="https://saswatamcode.tech/" />
           <meta
             property="twitter:title"
             content="Saswata Mukherjee - Web Developer - saswatamcode"
@@ -222,7 +219,15 @@ export default function IndexPage() {
             also interested in learning new technologies that allow me to craft
             new experiences.
           </Paragraph>
-          <a href={Resume} target="_blank"><ResumeBtn>Get Resume</ResumeBtn></a>
+          <a href={Resume} rel="noopener noreferrer" target="_blank">
+            <ResumeBtn>
+              <i
+                class="fa fa-download"
+                style={{ color: "white", transform: "scale(1)" }}
+              ></i>{" "}
+              Get Resume
+            </ResumeBtn>
+          </a>
         </Container>
 
         <Container>
