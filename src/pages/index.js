@@ -201,7 +201,7 @@ export default function IndexPage() {
               title="DSCKIIT"
               target="_blank"
               rel="noopener noreferrer"
-              href="http://dsckiit.in/"
+              href="https://dsckiit.github.io/"
             >
               Developer Student Clubs, KIIT{" "}
             </a>
