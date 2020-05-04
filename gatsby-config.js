@@ -3,6 +3,7 @@ module.exports = {
     title: `Saswata Mukherjee - Web Developer - saswatamcode`,
     description: `Technology has always piqued my interest. Ever since I started learning how to code, I've loved the idea of building something new that people can experience all around the web.`,
     author: `@saswatamcode`,
+    siteUrl: `https://saswatamcode.tech`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -16,6 +17,7 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-styled-components`,
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

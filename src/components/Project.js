@@ -57,10 +57,14 @@ const ProjectLink = styled.a`
   font-weight: bold;
 `
 
-export default function Project({ image, name, desc, link }) {
+export default function Project({ webpimg, image, name, desc, link }) {
   return (
     <ProjectBox>
-      <ProjectImage src={image} />
+      <picture>
+        <source srcSet={webpimg} type="image/webp" />
+        <source srcSet={image} />
+        <ProjectImage src={image} alt={name} />
+      </picture>
 
       <ProjectName>{name}</ProjectName>
       <ProjectDesc>{desc}</ProjectDesc>

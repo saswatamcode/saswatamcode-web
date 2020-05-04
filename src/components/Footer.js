@@ -93,7 +93,7 @@ export default function Footer() {
       <a href="mailto: saswataminsta@yahoo.com">
         <Email>saswataminsta@yahoo.com</Email>
       </a>
-      <FooterImg src={Collab} />
+      <FooterImg src={Collab} alt="Collaboration"/>
       <FooterLogoImg href="">SM.</FooterLogoImg>
     </FooterCont>
   )

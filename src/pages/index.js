@@ -2,12 +2,25 @@ import React, { useEffect } from "react"
 import styled from "styled-components/macro"
 import { Helmet } from "react-helmet"
 import LandingImage from "../images/LandingImage.png"
+
 import RainbowScrollbar from "../images/RainbowScrollbar.png"
+import RainbowScrollbarwebp from "../images/RainbowScrollbar.webp"
+
 import ReactJobBoard from "../images/ReactJobBoard.png"
+import ReactJobBoardwebp from "../images/ReactJobBoard.webp"
+
 import DataScience from "../images/DataScience.jpg"
+import DataSciencewebp from "../images/DataScience.webp"
+
 import InstaBot from "../images/InstaBot.png"
+import InstaBotwebp from "../images/InstaBot.webp"
+
 import ReactPokedex from "../images/ReactPokedex.png"
+import ReactPokedexwebp from "../images/ReactPokedex.webp"
+
 import CpuActivity from "../images/CpuActivity.png"
+import CpuActivitywebp from "../images/CpuActivity.webp"
+
 import Layout from "../components/Layout"
 import Header from "../components/Header"
 import "../index.css"
@@ -222,7 +235,7 @@ export default function IndexPage() {
           <a href={Resume} rel="noopener noreferrer" target="_blank">
             <ResumeBtn>
               <i
-                class="fa fa-download"
+                className="fa fa-download"
                 style={{ color: "white", transform: "scale(1)" }}
               ></i>{" "}
               Get Resume
@@ -333,18 +346,21 @@ export default function IndexPage() {
           </Paragraph>
           <SubContainer>
             <Project
+              webpimg={RainbowScrollbarwebp}
               image={RainbowScrollbar}
               name="React Rainbow ScrollBar"
               desc="A simple npm package to get an animated rainbow scrollbar for your React app."
               link="https://github.com/saswatamcode/react-rainbow-scrollbar"
             ></Project>
             <Project
+              webpimg={ReactJobBoardwebp}
               image={ReactJobBoard}
               name="React Job Board"
               desc="A web application which lists various jobs using the Github Jobs API. Built using React, Node.js, Express and Redis."
               link="https://github.com/saswatamcode/react_job_board"
             ></Project>
             <Project
+              webpimg={DataSciencewebp}
               image={DataScience}
               name="Data Science API"
               desc="This is a RESTful API built using Flask and Scikit-Learn. It provides a host of Classification and Regression algorithms."
@@ -353,18 +369,21 @@ export default function IndexPage() {
           </SubContainer>
           <SubContainer>
             <Project
+              webpimg={ReactPokedexwebp}
               image={ReactPokedex}
               name="React Pokédex"
               desc="A web application which lists pokémon data from PokeAPI.co. Made using React and material-ui."
               link="https://github.com/saswatamcode/ReactPokedex"
             ></Project>
             <Project
+              webpimg={InstaBotwebp}
               image={InstaBot}
               name="InstaBOT"
               desc="A simple Instagram bot which gives you the list of people you follow and aren't followed by. Made using Selenium."
               link="https://github.com/saswatamcode/InstaBOT"
             ></Project>
             <Project
+              webpimg={CpuActivitywebp}
               image={CpuActivity}
               name="CPU Activity Monitor"
               desc="A simple cross-platform desktop app made using Electron the shows a chart about your CPU activity."

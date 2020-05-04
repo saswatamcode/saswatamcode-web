@@ -15,5 +15,5 @@ const HeadImg = styled.img`
 `
 
 export default function HeaderImage() {
-  return <HeadImg src={Image} />
+  return <HeadImg src={Image} alt="Header Image"/>
 }

@@ -14,7 +14,7 @@ const OopsImg = styled.img`
 
 const NotFoundPage = () => (
   <>
-    <OopsImg src={Oops} />
+    <OopsImg src={Oops} alt="Oops"/>
     <br />
     <br />
     <br />
