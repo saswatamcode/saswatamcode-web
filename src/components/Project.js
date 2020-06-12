@@ -3,10 +3,8 @@ import styled from "styled-components/macro"
 import { breakpoints } from "./Media"
 
 const ProjectBox = styled.div`
-  width: 400px;
+  width: 100%;
   height: 500px;
-  margin: 50px;
-  text-align: left;
   transition: 0.3s;
   :hover {
     transform: scale(1.05);
@@ -69,7 +67,7 @@ export default function Project({ webpimg, image, name, desc, link }) {
       <ProjectName>{name}</ProjectName>
       <ProjectDesc>{desc}</ProjectDesc>
       <ProjectLink target="_blank" rel="noreferrer" href={link}>
-        View repository>
+        View repository{">"}
       </ProjectLink>
     </ProjectBox>
   )

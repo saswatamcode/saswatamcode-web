@@ -80,6 +80,16 @@ const Container = styled.div`
 `
 
 const SubContainer = styled.div`
+  margin-top: 70px;
+  width: 105%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 70px;
+  @media only screen and (max-width: 600px) {
+    grid-template-columns: 1fr;
+    width: 90%;
+  }
+/*
   margin: 0px 0;
   width: 100%;
   display: flex;
@@ -89,6 +99,7 @@ const SubContainer = styled.div`
   @media (min-width: ${breakpoints.mobileMax}) {
     flex-wrap: nowrap;
   }
+*/
 `
 
 const SkillTable = styled.div`
@@ -139,10 +150,8 @@ export default function IndexPage() {
         <Helmet>
           <title>Saswata Mukherjee - Web Developer - saswatamcode</title>
           <link
-            href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css"
             rel="stylesheet"
-            integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
-            crossorigin="anonymous"
           />
 
           <meta
@@ -153,6 +162,12 @@ export default function IndexPage() {
             name="description"
             content="Technology has always piqued my interest. Ever since I started learning how to code, I've loved the idea of building something new that people can experience all around the web."
           />
+          <meta
+            name="keywords"
+            content="Saswata Mukherjee, saswatamcode, web, developer, React, Node, Python, Flask, backend, frontend, fullstack, dev"
+          />
+          <meta name="author" content="Saswata Mukherjee" />
+
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://saswatamcode.tech/" />
           <meta

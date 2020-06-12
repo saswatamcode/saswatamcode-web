@@ -42,7 +42,7 @@ export default function Socials() {
           rel="noopener noreferrer"
           href="https://github.com/saswatamcode"
         >
-          <Icon className="fa fa-github" />
+          <Icon className="fab fa-github" />
         </a>
         <a
           title="LinkedIn"
@@ -50,7 +50,7 @@ export default function Socials() {
           rel="noopener noreferrer"
           href="https://www.linkedin.com/in/saswatamcode/"
         >
-          <Icon className="fa fa-linkedin" />
+          <Icon className="fab fa-linkedin" />
         </a>
         <a
           title="Twitter"
@@ -58,7 +58,7 @@ export default function Socials() {
           rel="noopener noreferrer"
           href="https://twitter.com/saswatamcode"
         >
-          <Icon className="fa fa-twitter" />
+          <Icon className="fab fa-twitter" />
         </a>
         <a
           title="Instagram"
@@ -66,7 +66,15 @@ export default function Socials() {
           rel="noopener noreferrer"
           href="https://www.instagram.com/saswatamcode/"
         >
-          <Icon className="fa fa-instagram" />
+          <Icon className="fab fa-instagram" />
+        </a>
+        <a
+          title="DEV"
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://dev.to/saswatamcode"
+        >
+          <Icon className="fab fa-dev"/>
         </a>
         <a
           title="Medium"
@@ -74,7 +82,7 @@ export default function Socials() {
           rel="noopener noreferrer"
           href="https://medium.com/@saswatamcode"
         >
-          <Icon className="fa fa-medium" />
+          <Icon className="fab fa-medium" />
         </a>
         <Line />
       </SocialsContainer>
