@@ -80,6 +80,7 @@ const Container = styled.div`
 `
 
 const SubContainer = styled.div`
+  margin-bottom: 50px;
   margin-top: 70px;
   width: 105%;
   display: grid;
@@ -350,12 +351,12 @@ export default function IndexPage() {
             I like to learn new things by doing projects using them. I also love
             writing technical articles about topics I'm passionate about on{" "}
             <a
-              title="Medium"
+              title="DEV"
               target="_blank"
               rel="noopener noreferrer"
-              href="https://medium.com/@saswatamcode"
+              href="https://dev.to/saswatamcode"
             >
-              Medium
+              Dev.to
             </a>
             . Take a look at the stuff I've worked on.
           </Paragraph>
