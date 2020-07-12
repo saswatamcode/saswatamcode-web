@@ -154,7 +154,7 @@ export default function IndexPage() {
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css"
             rel="stylesheet"
           />
-
+          <meta name="google-site-verification" content="cPvfGP5IIxkRvPKP_v7kGSGMA_YVCCMFLUAeFDMrZCo" />
           <meta
             name="title"
             content="Saswata Mukherjee - Web Developer - saswatamcode"
