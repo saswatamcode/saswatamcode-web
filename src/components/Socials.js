@@ -53,6 +53,14 @@ export default function Socials() {
           <Icon className="fab fa-linkedin" />
         </a>
         <a
+          title="DEV"
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://dev.to/saswatamcode"
+        >
+          <Icon className="fab fa-dev"/>
+        </a>
+        <a
           title="Twitter"
           target="_blank"
           rel="noopener noreferrer"
@@ -68,22 +76,14 @@ export default function Socials() {
         >
           <Icon className="fab fa-instagram" />
         </a>
-        <a
-          title="DEV"
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://dev.to/saswatamcode"
-        >
-          <Icon className="fab fa-dev"/>
-        </a>
-        <a
+        {/*<a
           title="Medium"
           target="_blank"
           rel="noopener noreferrer"
           href="https://medium.com/@saswatamcode"
         >
           <Icon className="fab fa-medium" />
-        </a>
+        </a>*/}
         <Line />
       </SocialsContainer>
     </>
