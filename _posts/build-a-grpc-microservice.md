@@ -1,13 +1,13 @@
 ---
 title: 'Build a gRPC microservice in Go'
 excerpt: "If you've dealt with microservices before, you've probably heard about gRPC. In this blog, we'll be exploring the awesome world of gRPC and write our very own microservice with it. We'll also delve into why gRPC might be better than our traditional REST architectures as well the caveats associated with it."
-coverImage: '/assets/blog/preview/cover.jpg'
+coverImage: '/assets/blog/build-a-grpc-microservice/cover.jpg'
 date: '2020-12-06T05:35:07.322Z'
 author:
   name: Saswata Mukherjee
   picture: '/assets/blog/authors/saswatamcode.jpeg'
 ogImage:
-  url: '/assets/blog/preview/cover.jpg'
+  url: '/assets/blog/build-a-grpc-microservice/cover.jpg'
 ---
 
 Hey there!

@@ -1,13 +1,13 @@
 ---
 title: 'React Context+Hooks API => Ideal State Management'
 excerpt: "Hey there! React is pretty great with a ton of stuff. But sometimes we need global states, such as a UI theme or locale preferences. Learm how to tackle global state with context and hooks!"
-coverImage: '/assets/blog/dynamic-routing/cover.jpg'
+coverImage: '/assets/blog/react-context-state/cover.jpg'
 date: '2020-05-07T05:35:07.322Z'
 author:
   name: Saswata Mukherjee
   picture: '/assets/blog/authors/saswatamcode.jpeg'
 ogImage:
-  url: '/assets/blog/dynamic-routing/cover.jpg'
+  url: '/assets/blog/react-context-state/cover.jpg'
 ---
 
 Hey there! React is pretty great with a ton of stuff. But sometimes we need global states, such as a UI theme or locale preferences. Now ordinarily, to pass states down to child components what we do is pass down props. But with global states, we have to pass down props several times down the component tree or the roots of a potato if you've seen [Women Of React 2020](https://www.youtube.com/watch?v=K8MF3aDg-bM). This creates a cumbersome phenomenon known as "prop drilling". This means that we are passing down the props from grandparent to parent to child and so on.

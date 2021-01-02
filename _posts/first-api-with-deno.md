@@ -1,13 +1,13 @@
 ---
 title: 'Write your first API with Deno'
 excerpt: "ICYMI, Deno v1.0 has been released! Deno is a simple, modern and secure runtime for JavaScript and TypeScript that uses V8 and is built in Rust. Let's build a really simple REST API which lets us perform CRUD operations on a database of dogs!"
-coverImage: '/assets/blog/dynamic-routing/cover.jpg'
+coverImage: '/assets/blog/first-api-with-deno/cover.jpg'
 date: '2020-05-19T05:35:07.322Z'
 author:
   name: Saswata Mukherjee
   picture: '/assets/blog/authors/saswatamcode.jpeg'
 ogImage:
-  url: '/assets/blog/dynamic-routing/cover.jpg'
+  url: '/assets/blog/first-api-with-deno/cover.jpg'
 ---
 
 ICYMI, Deno v1.0 has been released!

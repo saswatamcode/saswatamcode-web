@@ -19,6 +19,7 @@ const Index = ({ allPosts }: Props) => {
     <>
       <Layout>
         <Intro />
+        <div className="p-40"></div>
         <Container>
           {heroPost && (
             <HeroPost
