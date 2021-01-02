@@ -35,6 +35,7 @@ module.exports = {
           "linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab)",
         "header-wave-1-t": "#AC6DBD",
         "header-wave-1-b": "#7F56DF",
+        "footer": "#1F1557",
         main: "#1F1F47",
         "accent-1": "#FAFAFA",
         "accent-2": "#EAEAEA",

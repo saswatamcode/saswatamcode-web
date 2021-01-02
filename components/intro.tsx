@@ -1,13 +1,19 @@
+import Header from "./header";
+import Typist from "react-typist";
+import "react-typist/dist/Typist.css";
+
 const Intro = () => {
   return (
     <section className="flex-col md:flex-row flex items-center md:justify-between mb-16 md:mb-12">
-      <div className="animate-gradient bg-400 bg-gradient-to-br from-header-r via-header-l to-header-m w-full h-header p-16">
-        <h1 className="text-6xl md:text-8xl font-bold tracking-tighter leading-tight md:pr-8">
-          Hi there!
+      <div className="animate-gradient bg-400 bg-gradient-to-br from-header-m via-header-l to-header-r w-full h-header p-10">
+        <Header />
+
+        <h1 className="text-7xl font-bold tracking-tighter leading-tight ">
+          <Typist cursor={{ hideWhenDone: true, hideWhenDoneDelay: 1000 }}>
+            Hi there! <br /> I'm Saswata Mukherjee,
+            <br /> a Web Developer!
+          </Typist>
         </h1>
-        <h4 className="text-center md:text-left text-lg mt-5 md:pl-8">
-          I'm Saswata Mukherjee
-        </h4>
 
         <div className="absolute inset-x-0 bottom-11">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
