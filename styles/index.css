@@ -13,3 +13,8 @@
 /* Stop purging. */
 
 /* Your own custom utilities */
+
+body {
+    @apply bg-main;
+    @apply text-gray-50;
+}
