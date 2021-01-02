@@ -2,7 +2,7 @@
 title: 'Dynamic Pages in React Router'
 excerpt: "If you've ever visited a site with a bunch of different users with different content from each user such as a blogging site or social media, you've probably noticed that each page of a particular user has a route. Let's see how that's done in react"
 coverImage: '/assets/blog/dynamic-routing/cover.jpg'
-date: '2020-03-16T05:35:07.322Z'
+date: '2020-07-03T05:35:07.322Z'
 author:
   name: Saswata Mukherjee
   picture: '/assets/blog/authors/saswatamcode.jpeg'
