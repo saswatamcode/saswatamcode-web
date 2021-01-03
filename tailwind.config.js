@@ -31,11 +31,9 @@ module.exports = {
         "header-l": "#4B41DB",
         "header-m": "#42d8d0",
         "header-r": "#E07C80",
-        "header-gr":
-          "linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab)",
         "header-wave-1-t": "#AC6DBD",
         "header-wave-1-b": "#7F56DF",
-        "footer": "#1F1557",
+        footer: "#1F1557",
         main: "#1F1F47",
         "accent-1": "#FAFAFA",
         "accent-2": "#EAEAEA",
@@ -55,6 +53,7 @@ module.exports = {
       fontSize: {
         "5xl": "2.5rem",
         "6xl": "2.75rem",
+        header: "3.75rem",
         "7xl": "4.5rem",
         "8xl": "6.25rem",
       },

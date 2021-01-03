@@ -1,14 +1,15 @@
 import Header from "./header";
 import Typist from "react-typist";
 import "react-typist/dist/Typist.css";
+import Socials from "./socials";
 
 const Intro = () => {
   return (
     <section className="flex-col md:flex-row flex items-center md:justify-between mb-16 md:mb-12">
       <div className="animate-gradient bg-400 bg-gradient-to-br from-header-m via-header-l to-header-r w-full h-header p-10">
         <Header />
-
-        <h1 className="text-7xl font-bold tracking-tighter leading-tight ">
+        <Socials />
+        <h1 className="text-header font-bold tracking-tighter leading-tight pl-10">
           <Typist cursor={{ hideWhenDone: true, hideWhenDoneDelay: 1000 }}>
             Hi there! <br /> I'm Saswata Mukherjee,
             <br /> a Web Developer!
