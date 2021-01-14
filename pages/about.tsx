@@ -4,6 +4,7 @@ import Head from "next/head";
 import Header from "../components/header";
 import { CMS_NAME } from "../lib/constants";
 import Whoami from "../components/whoami";
+import Timeline from "../components/timeline";
 
 const About = () => {
   return (
@@ -12,6 +13,7 @@ const About = () => {
         <Container>
           <Header />
           <Whoami />
+          <Timeline />
         </Container>
       </Layout>
     </>

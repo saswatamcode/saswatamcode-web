@@ -4,7 +4,11 @@ import Link from "next/link";
 const Whoami = () => {
   return (
     <section className="pb-6">
-      <PostTitle>About Me</PostTitle>
+      <PostTitle>
+        <div className="flex gap-4">
+          <img src="/assets/images/hand.png" /> About Me
+        </div>
+      </PostTitle>
       <div className="grid grid-cols-2 gap-3">
         <p>
           I'm a 20 year old student at Kalinga Institute Of Industrial
