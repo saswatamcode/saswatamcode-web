@@ -7,7 +7,6 @@ import { getAllPosts } from "../lib/api";
 import Head from "next/head";
 import { CMS_NAME } from "../lib/constants";
 import Post from "../types/post";
-import Socials from "../components/socials";
 
 type Props = {
   allPosts: Post[];
@@ -20,8 +19,7 @@ const Index = ({ allPosts }: Props) => {
     <>
       <Layout>
         <Intro />
-        <div className="p-40">
-        </div>
+        <div className="pb-40"></div>
         <Container>
           {heroPost && (
             <HeroPost
