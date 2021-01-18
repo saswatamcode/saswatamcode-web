@@ -7,9 +7,9 @@ const Intro = () => {
   return (
     <section className="flex-col md:flex-row flex items-center md:justify-between mb-16 md:mb-12">
       <div className="animate-gradient bg-400 bg-gradient-to-br from-header-m via-header-l to-header-r w-full h-header p-10">
+        <Header />
         <div className="flex w-full">
           <div className="flex-col w-6/12">
-            <Header />
             <Socials />
             <h1 className="text-header font-bold tracking-tighter leading-tight pl-10">
               <Typist cursor={{ hideWhenDone: true, hideWhenDoneDelay: 1000 }}>
