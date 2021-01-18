@@ -1,7 +1,7 @@
 import { BiUpArrow } from "react-icons/bi";
 const Timeline = () => {
   return (
-    <div className="container  mx-auto w-full h-full">
+    <div className="container mt-10 mx-auto w-full h-full">
       <div className="relative wrap overflow-hidden p-10 h-full">
         <div className="w-full flex justify-center text-6xl">
           <BiUpArrow />
