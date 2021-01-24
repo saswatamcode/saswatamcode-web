@@ -15,9 +15,9 @@ const Footer = () => {
         ></path>
       </svg>
 
-      <footer className="bg-footer">
-        <div className="py-28 flex flex-col lg:flex-row items-center p-10">
-          <div className="flex flex-col gap-10 pr-20">
+      <footer className="bg-footer h-96">
+        <div className="w-full flex p-10 justify-between">
+          <div className="flex flex-col gap-10">
             <h3 className="w-full text-4xl lg:text-5xl font-bold tracking-tighter leading-tight text-center lg:text-left lg:mb-0 lg:pr-4">
               Let's build something together!
             </h3>
@@ -25,12 +25,20 @@ const Footer = () => {
               Looking for a developer or have an interesting idea? Feel free to
               reach out via email or any of my other socials
             </p>
+            <a
+              className="pl-5 text-xl font-bold hover:underline"
+              href="mailto:saswataminsta@yahoo.com"
+            >
+              saswataminsta@yahoo.com
+            </a>
           </div>
-
           <div className="flex flex-col lg:flex-row justify-center items-center lg:pl-4 lg:w-1/2">
-            <img src="assets/images/building.svg" />
+            <img className="h-44" src="assets/images/building.svg" />
           </div>
         </div>
+        <p className="w-full flex justify-center p-4 font-extrabold">
+          Made with 💙 by @saswatamcode
+        </p>
       </footer>
     </>
   );
