@@ -6,7 +6,7 @@ import Socials from "./socials";
 const Intro = () => {
   return (
     <section className="flex-col md:flex-row flex items-center md:justify-between mb-16 md:mb-12">
-      <div className="animate-gradient bg-400 bg-gradient-to-br from-header-m via-header-l to-header-r w-full h-header p-10">
+      <div className="animate-gradient bg-400 bg-gradient-to-br from-header-m via-header-l to-header-r w-full h-screen p-10">
         <Header />
         <div className="flex w-full">
           <div className="flex-col w-6/12">
@@ -20,7 +20,7 @@ const Intro = () => {
           </div>
         </div>
 
-        <div className="absolute inset-x-0 bottom-11">
+        <div className="absolute inset-x-0 bottom-10">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
             <linearGradient id="gradient-1" x1="0%" y1="0%" x2="0%" y2="100%">
               <stop stopColor="#AC6DBD" offset="0%" />
@@ -33,7 +33,7 @@ const Intro = () => {
           </svg>
         </div>
 
-        <div className="absolute inset-x-0 bottom-0">
+        <div className="absolute inset-x-0 -bottom-1">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
             <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
               <stop stopColor="#3D3190" offset="0%" />
