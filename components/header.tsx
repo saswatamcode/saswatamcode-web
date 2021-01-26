@@ -19,7 +19,7 @@ const Header = () => {
         <Link href="/posts">
           <a className="hover:underline">Blog</a>
         </Link>
-        <Link href="/posts">
+        <Link href="/contact">
           <a className="hover:underline">Contact</a>
         </Link>
       </div>
