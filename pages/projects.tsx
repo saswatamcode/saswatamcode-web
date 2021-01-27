@@ -9,10 +9,8 @@ const Projects = () => {
     <>
       <Layout>
         <Container>
-            <Header />
-            <PostTitle>
-                Projects I'm Working On
-            </PostTitle>
+          <Header />
+          <PostTitle>Projects I'm Working On</PostTitle>
           <ProjectGrid />
         </Container>
       </Layout>

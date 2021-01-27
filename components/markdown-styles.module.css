@@ -4,9 +4,32 @@
 
 .markdown p,
 .markdown ul,
-.markdown ol,
-.markdown blockquote {
+.markdown ol {
   @apply my-6;
+}
+
+.markdown blockquote {
+  @apply my-6 border-l-4 border-indigo-300 rounded pl-4;
+}
+
+.markdown a {
+  @apply text-blue-500;
+}
+
+.markdown a:hover {
+  @apply underline;
+}
+
+.markdown pre {
+  padding-top: 2rem !important;
+  background-image: url("../public/assets/images/macos.png") !important;
+  background-repeat: no-repeat !important;
+  background-size: 44px 10px !important;
+  background-position: 16px 14px !important;
+}
+
+.markdown code {
+  @apply p-1 rounded bg-purple-900 font-mono;
 }
 
 .markdown h2 {

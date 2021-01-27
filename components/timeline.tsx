@@ -21,9 +21,14 @@ const Timeline = () => {
               Software Engineer Intern, MayaData
             </h3>
             <p className="text-sm leading-snug tracking-wide text-gray-900 text-opacity-100">
-              - Working on the frontend aspects of LitmusChaos, an open-source
-              Cloud-Native Kubernetes Chaos Engineering toolset for SREs as well
-              as Kubera, a single-click enterprise-level K8s automation solution
+              Developed UI components and screens and worked on code refactors
+              for data intensive dashboards of LitmusChaos, an open source
+              Cloud-Native Chaos Engineering Toolkit for SREs, as well as
+              Kubera, a single-click enterprise Kubernetes automation solution
+              Worked on transitioning frontend codebases for detailed Chaos
+              Engineering dashboards to use a custom in-house component library,
+              Kubera-UI, using technologies like React.js, Material-UI,
+              TypeScript & StoryBook.
             </p>
           </div>
         </div>
@@ -38,10 +43,12 @@ const Timeline = () => {
               Developer Student Clubs(Google), KIIT
             </h3>
             <p className="text-sm font-medium leading-snug tracking-wide text-white text-opacity-100">
-              Worked on several projects using React, Node.js, Firebase, HTML5,
-              CSS3, MongoDB as well as website maintenance. Wrote several
-              technical blogs on dev.to and took online sessions on YouTube as
-              well. Aiding in building a strong developer community.
+              Developed CLI for Divert, the internal URL redirect service, with
+              secure authentication and aesthetic design. Released as an npm
+              package. Developed the judging web portal for devhack, an online
+              hackathon, for judges to mark submissions using Gatsby.js and
+              Styled-Components. Conducted online sessions and wrote technical
+              blogs.
             </p>
           </div>
         </div>
@@ -56,10 +63,11 @@ const Timeline = () => {
               Mozilla Club BBSR
             </h3>
             <p className="text-sm leading-snug tracking-wide text-gray-900 text-opacity-100">
-              Implemented a new website with React, Firebase, and Bootstrap.
-              Organized workshops on Git & GitHub and Streamlit, a framework for
-              rapid prototyping of ML apps. Helping in making the internet a
-              better place.
+              Developed new website from scratch with React.js and Firebase,
+              with features like easy & secure uploading of event content and
+              images. Organized workshops on Git & GitHub as well as Streamlit,
+              a framework for rapid prototyping of machine learning applications
+              using Pytorch & Tensorflow
             </p>
           </div>
         </div>
@@ -71,7 +79,7 @@ const Timeline = () => {
           </div>
           <div className="order-1 bg-red-400 rounded-lg shadow-xl w-5/12 px-6 py-4">
             <h3 className="mb-3 font-bold text-white text-xl">
-              Computer Science & Engineer, @ KIIT
+              Computer Science & Engineering, @ KIIT
             </h3>
           </div>
         </div>
