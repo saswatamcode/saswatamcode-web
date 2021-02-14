@@ -9,13 +9,10 @@
 [![Javascript](https://badges.frapsoft.com/javascript/code/javascript.svg?v=101)](https://github.com/ellerbrock/javascript-badges/)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/cb901bb5-ad85-4a71-8307-baf5b2ab555b/deploy-status)](https://app.netlify.com/sites/hardcore-kilby-ea01f9/deploys)
 
-# Saswatamcode Gatsby
-A refreshed personal portfolio page built with Gatsby, styled-components and Netlify. View at https://saswatamcode.tech/
-
-## Screenshots
-![Screenshot-1!](screenshots/Screenshot-1.png)
+# Saswatamcode Next
+A personal portfolio page built with Next.js and TailwindCSS.
 
 ## To run
 - Clone into repo
-- Run `npm i`
-- Run `gatsby develop`
+- Run `yarn`
+- Run `yarn dev`
