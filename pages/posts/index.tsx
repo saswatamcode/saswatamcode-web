@@ -15,11 +15,11 @@ const Blog = ({ allPosts }: Props) => {
       <Layout>
         <Container>
           <Header />
-          <section>
-            <h2 className="mb-8 text-6xl md:text-7xl font-bold tracking-tighter leading-tight">
-              Blog
-            </h2>
-            <div className="grid gap-10 grid-cols-1">
+          <section className="w-full flex flex-col items-center">
+            <div className="grid gap-10 grid-cols-1 max-w-4xl">
+              <h2 className="mb-8 text-6xl md:text-7xl font-bold tracking-tighter leading-tight">
+                Blog
+              </h2>
               {allPosts.map((post) => (
                 <PostPreview
                   key={post.slug}
