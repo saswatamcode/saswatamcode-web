@@ -1,12 +1,11 @@
 ---
-title: "Build a chat app with GraphQL and TypeScript: Part 3"
-description: "Now that our server's ready let's start making our frontend! We won't be adding any CSS in this article, but you can definitely style it later on!"
-date: 2021-02-28T05:37:07.322Z
-lastmod: 2021-02-28T05:37:07.322Z
-draft: false
 weight: 50
+title: 'Build a chat app with GraphQL and TypeScript: Part 3'
+lastmod: "2021-02-28T05:37:07.322Z"
 images: []
-contributors: ["saswatamcode"]
+draft: false
+description: Now that our server's ready let's start making our frontend! We won't be adding any CSS in this article, but you can definitely style it later on!
+date: "2021-02-28T05:37:07.322Z"
 ---
 
 Now that our server's ready let's start making our frontend! We won't be adding any CSS in this article, but you can definitely style it later on!
@@ -77,7 +76,7 @@ Alright, let's breakdown what we wrote!
 
 First, we initialized an `ApolloClient` instance, `client`, with our GraphQL server endpoint and the `InMemoryCache()` class provided by apollo. We then connect our `client` to React, by passing it as a prop to `ApolloProvider`. This will wrap our React app and place our client in context which means that we can access our `client` from anywhere in our component tree and execute GraphQL operations.
 
-Now, we would want a name from our user, so that the user can send chats in our chat app. So we declare a `name` state to store our user's name and an `entered` state so that we can figure when to show the chats and when to show an "enter chat" screen which would let the user enter their name. We use pretty simple conditional rendering to do this. 
+Now, we would want a name from our user, so that the user can send chats in our chat app. So we declare a `name` state to store our user's name and an `entered` state so that we can figure when to show the chats and when to show an "enter chat" screen which would let the user enter their name. We use pretty simple conditional rendering to do this.
 
 If the user hasn't entered the chat or provided their name, i.e, if `entered` is false, we show an input field to set the `name` state and an "Enter chat" button which sets `entered` to true. If `entered` is true and `name` isn't an empty string, we show chats (we'll be adding components for this soon). Also, we'll be using `name` as a local state and threading it through our components for now.
 
@@ -154,7 +153,7 @@ export default App;
 
 Alright, so our `client` changed up quite a bit!
 
-First, we initialize a `WebSocketLink` instance with our GraphQL API's subsciption endpoint. We also initialize a `HttpLink` instance with our GraphQL API's HTTP endpoint. 
+First, we initialize a `WebSocketLink` instance with our GraphQL API's subsciption endpoint. We also initialize a `HttpLink` instance with our GraphQL API's HTTP endpoint.
 
 Now, since queries and mutations don't require a long-lasting real-time connection, http would be much more efficient for them. Thus, we could like to split our communication on the basis of the GraphQL operation required, i.e, we want to use `HttpLink` if it's a query or a mutation, but would switch over to `WebSocketLink` if it's a subscription.
 
@@ -211,7 +210,7 @@ const SendMessage: FC<SendMessageProps> = ({ name }) => {
 export default SendMessage;
 ```
 
-Alright, we have a really simple component this time, with one input field to fill out the message the user wants to send, which is stored in our `input` state and a button that calls the `handleSend()` function when it's clicked. It also takes in the name of the user as a prop. The most important thing to note here is our mutation. 
+Alright, we have a really simple component this time, with one input field to fill out the message the user wants to send, which is stored in our `input` state and a button that calls the `handleSend()` function when it's clicked. It also takes in the name of the user as a prop. The most important thing to note here is our mutation.
 
 We use the `useMutation` hook from Apollo to call our mutation. We've defined our mutation query as a GraphQL string, `SEND_MESSAGE` which we pass into our hook. The `useMutation` hook in turn returns a tuple that has a mutate function (`sendMessage()` here) which we can call to execute the mutation and an object with fields that represent the current status of the mutation. We won't be using that object here for now.
 
@@ -256,9 +255,9 @@ const Chats = () => {
 export default Chats;
 ```
 
-Alright, let's understand what we wrote. We used the `useQuery` hook by Apollo, to execute our `allChats` query, which is defined as a GraphQL string, `ALL_CHATS`. When our component renders, the `useQuery` hook returns an object with `loading`, `error`, and `data` which we then use to render our UI. 
+Alright, let's understand what we wrote. We used the `useQuery` hook by Apollo, to execute our `allChats` query, which is defined as a GraphQL string, `ALL_CHATS`. When our component renders, the `useQuery` hook returns an object with `loading`, `error`, and `data` which we then use to render our UI.
 
-When there's no error, and the data is done loading, we loop through our chats and display the name of the sender and the message. Keep in mind that Apollo Client automatically caches our query results locally, to make subsequent query results faster. 
+When there's no error, and the data is done loading, we loop through our chats and display the name of the sender and the message. Keep in mind that Apollo Client automatically caches our query results locally, to make subsequent query results faster.
 
 ## Use subscription to update query result
 
@@ -326,11 +325,11 @@ export default Chats;
 
 We just changed a bunch of stuff so let's figure out what we did.
 
-If you look closely, our UI logic hasn't changed one bit. However, our data fetching logic has. 
+If you look closely, our UI logic hasn't changed one bit. However, our data fetching logic has.
 
 The `useQuery` hook returns another function, `subscribeToMore()`. We can use this function to execute a followup GraphQL subscription that can push updates to our query's, i.e `allChats`, original results.
 
-Now, we use the `subscribeToMore()` function inside a `useEffect` hook which has an empty dependency array, i.e, it fires when the component is mounted. We pass in two options to the `subscribeToMore()` function, `document` which indicates which subscription needs to be executed, and `updateQuery` which is a function that tells Apollo Client how to combine the query's currently cached result (`prev` here) with the `subscriptionData` that's pushed by our GraphQL subscription. The return value of this function completely replaces the current cached result for the query. 
+Now, we use the `subscribeToMore()` function inside a `useEffect` hook which has an empty dependency array, i.e, it fires when the component is mounted. We pass in two options to the `subscribeToMore()` function, `document` which indicates which subscription needs to be executed, and `updateQuery` which is a function that tells Apollo Client how to combine the query's currently cached result (`prev` here) with the `subscriptionData` that's pushed by our GraphQL subscription. The return value of this function completely replaces the current cached result for the query.
 
 Thus, for `document` we pass in our subscription `CHATS_SUBSCRIPTION` defined as a GraphQL string, and for `updateQuery`, we pass in a function that appends the `newChat` received from our subscription to our previous chat data and returns that as an object that our UI can iterate over. The object is of the same type as the results of our `allChats` query but now has the latest chat at the last index of the `getChats` field array. Since this is a subscription, our cached chats will now get updated the moment a new chat arrives!
 

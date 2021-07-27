@@ -3,10 +3,10 @@
   url = "/blog/"
   weight = 20
 
-[[main]]
-  name = "About"
-  url = "/about/"
-  weight = 20
+# [[main]]
+#   name = "About"
+#   url = "/about/"
+#   weight = 20
 
 [[social]]
   name = "Twitter"

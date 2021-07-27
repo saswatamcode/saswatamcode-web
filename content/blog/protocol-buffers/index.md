@@ -1,12 +1,11 @@
 ---
-title: "Protocol Buffers in Go"
-description: "If you've explored the world of microservices, you've probably come across the term gRPC. A major reason why gRPC has grown so popular, is due to the fact that it uses a special mechanism for data serialisation which makes payloads smaller, faster and simpler known as Protocol Buffers"
-date: 2020-08-05T05:35:07.322Z
-lastmod: 2020-08-05T05:35:07.322Z
-draft: false
 weight: 50
+title: Protocol Buffers in Go
+lastmod: "2020-08-05T05:35:07.322Z"
 images: []
-contributors: ["saswatamcode"]
+draft: false
+description: If you've explored the world of microservices, you've probably come across the term gRPC. A major reason why gRPC has grown so popular, is due to the fact that it uses a special mechanism for data serialisation which makes payloads smaller, faster and simpler known as Protocol Buffers
+date: "2020-08-05T05:35:07.322Z"
 ---
 
 Hey there! If you've explored the world of microservices, you've probably come across the term `gRPC`. It's a modern open source high performance Remote Procedure Call framework which can run in any environment. It's grown super popular recently with scalable distributed system architecture.

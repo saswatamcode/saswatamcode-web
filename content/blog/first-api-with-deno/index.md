@@ -1,12 +1,11 @@
 ---
-title: "Write your first API with Deno"
-description: "ICYMI, Deno v1.0 has been released! Deno is a simple, modern and secure runtime for JavaScript and TypeScript that uses V8 and is built in Rust. Let's build a really simple REST API which lets us perform CRUD operations on a database of dogs!"
-date: 2020-05-19T05:35:07.322Z
-lastmod: 2020-05-19T05:35:07.322Z
-draft: false
 weight: 50
+title: Write your first API with Deno
+lastmod: "2020-05-19T05:35:07.322Z"
 images: []
-contributors: ["saswatamcode"]
+draft: false
+description: ICYMI, Deno v1.0 has been released! Deno is a simple, modern and secure runtime for JavaScript and TypeScript that uses V8 and is built in Rust. Let's build a really simple REST API which lets us perform CRUD operations on a database of dogs!
+date: "2020-05-19T05:35:07.322Z"
 ---
 
 ICYMI, Deno v1.0 has been released!
@@ -46,7 +45,7 @@ app
   .start({ port: 8000 });
 ```
 
-Now, if you've worked with node before, this'll look pretty familiar. Initially, we're importing  `Application` and `Context` from the Abc module. We are basically initialising a new Abc application and then we're defining a route `/hello` with a callback function which will return "Hello, Abc!". The `start` method directs the application to start listening for requests at port 8000. Instead of request and response we have single argument `c` which is of type `Context` . Let's see this in action. To run our file we need to use the command `deno run server.ts` but if you run the file you're gonna get a bunch of errors. That's because deno is secure by default. It won't allow the application to access your system in any way. To allow it we need to add the `--allow-read` flag to allow Denv to read our `.env` file and `--allow-net` flag to give Abc access to our ports. Hence the command would be:
+Now, if you've worked with node before, this'll look pretty familiar. Initially, we're importing `Application` and `Context` from the Abc module. We are basically initialising a new Abc application and then we're defining a route `/hello` with a callback function which will return "Hello, Abc!". The `start` method directs the application to start listening for requests at port 8000. Instead of request and response we have single argument `c` which is of type `Context` . Let's see this in action. To run our file we need to use the command `deno run server.ts` but if you run the file you're gonna get a bunch of errors. That's because deno is secure by default. It won't allow the application to access your system in any way. To allow it we need to add the `--allow-read` flag to allow Denv to read our `.env` file and `--allow-net` flag to give Abc access to our ports. Hence the command would be:
 
 ```bash
 deno run --allow-read --allow-net server.ts
@@ -236,9 +235,9 @@ export const deleteDog: HandlerFunc = async (c: Context) => {
 };
 ```
 
-Alright so there's a lot happening here. First we're importing `HandlerFunc` and `Context` from the Abc module and `db` from our `config/db.ts` file. Then we call `getDatabase()` to get our "deno_dogs" db and define a collection "dogs" inside it. Next we define an interface `Dog` which has the properties of name, breed and age. With all that out of the way, let's move on to the functions. 
+Alright so there's a lot happening here. First we're importing `HandlerFunc` and `Context` from the Abc module and `db` from our `config/db.ts` file. Then we call `getDatabase()` to get our "deno_dogs" db and define a collection "dogs" inside it. Next we define an interface `Dog` which has the properties of name, breed and age. With all that out of the way, let's move on to the functions.
 
-Each function has a type of `HandlerFunc` and argument `c` which is of type `Context` . This lets us use this function as a callback for our routes. All the functions are almost similar so there isn't much to explain. We use `c.body()` to access our request body in case of `createDog` and `updateDog`. We return a json object or string via `c.json()` or `c.string()` along with HTTP codes in our return statements in all the above methods. We access url parameters via `c.params` in case of `fetchOneDog, updateDog` and `deleteDog`. 
+Each function has a type of `HandlerFunc` and argument `c` which is of type `Context` . This lets us use this function as a callback for our routes. All the functions are almost similar so there isn't much to explain. We use `c.body()` to access our request body in case of `createDog` and `updateDog`. We return a json object or string via `c.json()` or `c.string()` along with HTTP codes in our return statements in all the above methods. We access url parameters via `c.params` in case of `fetchOneDog, updateDog` and `deleteDog`.
 
 We also use the `dogs` object in our functions to manipulate our collection via methods like `.insertOne({}), .find({}), .findOne({}), .updateOne({})` and `deleteOne({})`. All of these methods are wrapped in try-catch blocks for error handling.
 
@@ -278,7 +277,7 @@ We are done writing our REST API. All that's left is to run it! To do that type 
 deno run --allow-write --allow-read --allow-plugin --allow-net --allow-env --unstable server.ts
 ```
 
-We have a few new flags this time. The `--allow-read/write` flags are for Denv and mongoDB, as they need read/write access to your filesystem. The `--allow-plugin` flag allows the use of the mongoDB plugin and the `--allow-env` is for allowing usage of environment variables. 
+We have a few new flags this time. The `--allow-read/write` flags are for Denv and mongoDB, as they need read/write access to your filesystem. The `--allow-plugin` flag allows the use of the mongoDB plugin and the `--allow-env` is for allowing usage of environment variables.
 
 A lot of Deno APIs are not stable yet so some of them are marked as unstable. To use these "unstable" APIs we need to add the `--unstable` flag.
 
@@ -294,7 +293,7 @@ Use a tool like [Postman](https://www.postman.com/) and send a POST request to [
 
 Send a GET request to the same url to see your dogs! Similarly try out all the other routes.
 
-So there you go! Now you know how to write a REST API with Deno. 
+So there you go! Now you know how to write a REST API with Deno.
 
 Here's the [GitHub](https://github.com/saswatamcode/deno_dogs_api) repo of the code.
 

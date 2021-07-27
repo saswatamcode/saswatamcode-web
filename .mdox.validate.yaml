@@ -1,0 +1,9 @@
+version: 1
+
+validators:
+  - regex: 'localhost'
+    type: 'ignore'
+  - regex: 'envoyproxy'
+    type: 'ignore'
+  - regex: 'deno\.land'
+    type: 'ignore'

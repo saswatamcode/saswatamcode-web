@@ -1,17 +1,16 @@
 ---
-title: "Dynamic Pages in React Router"
-description: "If you've ever visited a site with a bunch of different users with different content from each user such as a blogging site or social media, you've probably noticed that each page of a particular user has a route. Let's see how that's done in react"
-date: 2020-07-03T05:35:07.322Z
-lastmod: 2020-07-03T05:35:07.322Z
-draft: false
 weight: 50
+title: Dynamic Pages in React Router
+lastmod: "2020-07-03T05:35:07.322Z"
 images: []
-contributors: ["saswatamcode"]
+draft: false
+description: If you've ever visited a site with a bunch of different users with different content from each user such as a blogging site or social media, you've probably noticed that each page of a particular user has a route. Let's see how that's done in react
+date: "2020-07-03T05:35:07.322Z"
 ---
 
-Hey there! 
+Hey there!
 
-If you've ever visited a site with a bunch of different users with different content from each user such as a blogging site, social media or even [dev.t](http://dev.tp)o, you've probably noticed that each page of a particular user has a route along the lines of `/username` or if you visit a particular article of the user on the site then a route like `/username/article`.  You'll even notice that while all the pages have similar structure, their content is different.
+If you've ever visited a site with a bunch of different users with different content from each user such as a blogging site, social media or even [dev.t](http://dev.to), you've probably noticed that each page of a particular user has a route along the lines of `/username` or if you visit a particular article of the user on the site then a route like `/username/article`. You'll even notice that while all the pages have similar structure, their content is different.
 
 This is what's known as dynamic pages and routes.
 
@@ -113,13 +112,13 @@ export default App;
 
 Now that's a lot of new code. Let's break down what we wrote.
 
-We have two states,  `isLoading` which is a boolean which tells us whether we have received data from our API or not and `data` which contains the JSON that we'll receive from the API call. 
+We have two states, `isLoading` which is a boolean which tells us whether we have received data from our API or not and `data` which contains the JSON that we'll receive from the API call.
 
 We use a `useEffect` hook to fetch data when the `HomePage` component loads. When we get data from the API we set the value of `isLoading` to false and `data` to whatever JSON we get.
 
-Now, if you look at the `jsx` inside the `HomePage` component you'll see that we check the value of `isLoading` and if it's false, we map through `data` to render the names of the Star Wars characters. 
+Now, if you look at the `jsx` inside the `HomePage` component you'll see that we check the value of `isLoading` and if it's false, we map through `data` to render the names of the Star Wars characters.
 
-If you run your app now you should see the names pop up one after the other. 
+If you run your app now you should see the names pop up one after the other.
 
 You can check out the Swapi documentation [here](https://swapi.dev/documentation).
 
@@ -214,7 +213,7 @@ Again that's a lot of changes to our code.
 
 We have defined a `PersonPage` component which lists details about each person by getting data from the API in the same fashion as `HomePage`. We have also defined a new route for this component i.e, `person/:personId`. This is a bit different compared to our regular routes. Here we pass a parameter `personId` through the route. That way a single component at that route can be dynamic based on that parameter.
 
-`HomePage` has also changed and now returns links to this dynamic route with `index` as the route parameter. 
+`HomePage` has also changed and now returns links to this dynamic route with `index` as the route parameter.
 
 If you observe `PersonPage` closely, you'll realise that the while the structure of it stays the same, all the content on the page is dependent on `personId` i.e, the component is fully dynamic. But `PersonPage` hasn't accessed this parameter yet. This is where we'll use a little bit of React Router magic.
 
