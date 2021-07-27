@@ -1,0 +1,42 @@
+# Meta Data for SEO
+
+## Homepage
+title = "Saswata Mukherjee"
+titleSeparator = "-"
+titleAddition = "@saswatamcode"
+description = "GSoC'21 @ CNCF(under the Thanos project) | prev SDE intern ChaosNative | Tech enthusiast👨🏻‍💻 | CSE Undergrad"
+
+## Open Graph
+images = ["saswatamcode.png"]
+ogLocale = "en_US"
+domainTLD = "saswatamcode.tech"
+titleHome = "Saswata Mukherjee"
+
+## Open Graph + Twitter Cards
+twitterSite = "@saswatamcode"
+twitterCreator = "@saswatamcode"
+
+## JSON-LD
+schemaType = "Person"
+schemaLogo = "saswatamcode.png"
+schemaTwitter = "https://twitter.com/saswatamcode"
+schemaLinkedIn = "https://www.linkedin.com/in/saswatamcode/"
+schemaGitHub = "https://github.com/saswatamcode"
+schemaSection = "blog"
+
+## Sitelinks Search Box
+siteLinksSearchBox = false
+
+## Chrome Browser
+themeColor = "#fff"
+
+[options]
+  lazySizes = false
+  clipBoard = true
+  instantPage = false
+  flexSearch = false
+  darkMode = true
+  bootStrapJs = false
+  breadCrumb = true
+  highLight = true
+  kaTex = false
