@@ -1,5 +1,7 @@
 enableGitInfo = true
 
+disableKinds = ["sitemap"]
+
 [markup]
   [markup.highlight]
     codeFences = true

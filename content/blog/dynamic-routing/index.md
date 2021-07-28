@@ -10,7 +10,7 @@ date: "2020-07-03T05:35:07.322Z"
 
 Hey there!
 
-If you've ever visited a site with a bunch of different users with different content from each user such as a blogging site, social media or even [dev.t](http://dev.to), you've probably noticed that each page of a particular user has a route along the lines of `/username` or if you visit a particular article of the user on the site then a route like `/username/article`. You'll even notice that while all the pages have similar structure, their content is different.
+If you've ever visited a site with a bunch of different users with different content from each user such as a blogging site, social media or even [dev.to](http://dev.to), you've probably noticed that each page of a particular user has a route along the lines of `/username` or if you visit a particular article of the user on the site then a route like `/username/article`. You'll even notice that while all the pages have similar structure, their content is different.
 
 This is what's known as dynamic pages and routes.
 
