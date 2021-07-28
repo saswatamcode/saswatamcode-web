@@ -16,14 +16,13 @@ check: $(MDOX)
 	$(MDOX) fmt --check -l --links.validate.config-file=$(MDOX_CONFIG) $(MD_FILES_TO_FORMAT)
 
 .PHONY: web-pre
-web-pre: $(WEBSITE_DIR)/node_modules $(HUGO)
+web-pre: $(HUGO)
 	@git submodule update --init --recursive
 	cd $(WEBSITE_DIR)/themes/doks/ && npm install && rm -rf content
 	cd $(WEBSITE_DIR)/themes/doks/layouts/partials/footer && rm -rf footer.html && touch footer.html
-	cd $(WEBSITE_DIR) && $(HUGO) -b $(WEBSITE_BASE_URL)
 
 .PHONY: web
-web: $(WEBSITE_DIR)/node_modules $(HUGO)
+web: web-pre $(WEBSITE_DIR)/node_modules $(HUGO)
 	cd $(WEBSITE_DIR) && $(HUGO) -b $(WEBSITE_BASE_URL)
 
 .PHONY: web-serve
