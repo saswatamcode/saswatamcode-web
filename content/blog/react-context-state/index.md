@@ -2,7 +2,8 @@
 weight: 50
 title: React Context+Hooks API => Ideal State Management
 lastmod: "2020-05-07T05:35:07.322Z"
-images: []
+images:
+    - cover.jpg
 draft: false
 description: Hey there! React is pretty great with a ton of stuff. But sometimes we need global states, such as a UI theme or locale preferences. Learm how to tackle global state with context and hooks!
 date: "2020-05-07T05:35:07.322Z"

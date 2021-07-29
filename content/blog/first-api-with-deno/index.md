@@ -2,7 +2,8 @@
 weight: 50
 title: Write your first API with Deno
 lastmod: "2020-05-19T05:35:07.322Z"
-images: []
+images:
+    - cover.jpg
 draft: false
 description: ICYMI, Deno v1.0 has been released! Deno is a simple, modern and secure runtime for JavaScript and TypeScript that uses V8 and is built in Rust. Let's build a really simple REST API which lets us perform CRUD operations on a database of dogs!
 date: "2020-05-19T05:35:07.322Z"
