@@ -2,7 +2,8 @@
 weight: 50
 title: Build a gRPC microservice Go
 lastmod: "2020-12-06T05:35:07.322Z"
-images: []
+images:
+    - cover.jpg
 draft: false
 description: If you've dealt with microservices before, you've probably heard about gRPC. In this blog, we'll be exploring the awesome world of gRPC and write our very own microservice with it. We'll also delve into why gRPC might be better than our traditional REST architectures as well the caveats associated with it.
 date: "2020-12-06T05:35:07.322Z"

@@ -2,7 +2,8 @@
 weight: 50
 title: 'Build a chat app with GraphQL and TypeScript: Part 2'
 lastmod: "2021-02-28T05:36:07.322Z"
-images: []
+images:
+    - cover.jpg
 draft: false
 description: In this part, we'll be adding our subscription to our GraphQL API.
 date: "2021-02-28T05:36:07.322Z"

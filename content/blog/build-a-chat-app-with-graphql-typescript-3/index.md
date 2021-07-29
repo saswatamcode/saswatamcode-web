@@ -2,7 +2,8 @@
 weight: 50
 title: 'Build a chat app with GraphQL and TypeScript: Part 3'
 lastmod: "2021-02-28T05:37:07.322Z"
-images: []
+images:
+    - cover.jpg
 draft: false
 description: Now that our server's ready let's start making our frontend! We won't be adding any CSS in this article, but you can definitely style it later on!
 date: "2021-02-28T05:37:07.322Z"

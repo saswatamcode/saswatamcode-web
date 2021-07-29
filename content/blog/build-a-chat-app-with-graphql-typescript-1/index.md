@@ -2,7 +2,8 @@
 weight: 50
 title: 'Build a chat app with GraphQL and TypeScript: Part 1'
 lastmod: "2021-02-28T05:35:07.322Z"
-images: []
+images:
+    - cover.jpg
 draft: false
 description: If you're a little familiar with [GraphQL](https://graphql.org/), you've probably heard of subscriptions and how useful they are in building real-time applications. In this series of blogs, we're going to build a simple chat application using Node.js and React with GraphQL.
 date: "2021-02-28T05:35:07.322Z"

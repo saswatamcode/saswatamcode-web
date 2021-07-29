@@ -2,7 +2,8 @@
 weight: 50
 title: Dynamic Pages in React Router
 lastmod: "2020-07-03T05:35:07.322Z"
-images: []
+images:
+    - cover.jpg
 draft: false
 description: If you've ever visited a site with a bunch of different users with different content from each user such as a blogging site or social media, you've probably noticed that each page of a particular user has a route. Let's see how that's done in react
 date: "2020-07-03T05:35:07.322Z"
