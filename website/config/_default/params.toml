@@ -13,8 +13,8 @@ domainTLD = "saswatamcode.tech"
 titleHome = "Saswata Mukherjee"
 
 ## Open Graph + Twitter Cards
-twitterSite = "@saswatamcode"
-twitterCreator = "@saswatamcode"
+twitterSite = "saswatamcode"
+twitterCreator = "saswatamcode"
 
 ## JSON-LD
 schemaType = "Person"
@@ -35,7 +35,7 @@ themeColor = "#fff"
   clipBoard = true
   instantPage = false
   flexSearch = false
-  darkMode = true
+  darkMode = false ## actually default it with hack: https://github.com/h-enk/doks/discussions/64
   bootStrapJs = false
   breadCrumb = true
   highLight = true

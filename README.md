@@ -6,7 +6,9 @@ A personal blog website built with Hugo using [Doks theme](https://getdoks.org/)
 
 Planning to migrate to Next.js + Tailwind soon(see [here](https://github.com/saswatamcode/saswatamcode-web/tree/next-migration)).
 
-Visits https://saswatamcode.tech!
+Visit https://saswatamcode.tech!
+
+![](content/cover.png)
 
 ## Run
 - Clone into repo
@@ -15,5 +17,5 @@ Visits https://saswatamcode.tech!
 - Run `make format`
 
 ## CI and deps
-- Formats markdown and link checking using [mdox](https://github.com/bwplotka/mdox).
+- Markdown formatting and link checking by [mdox](https://github.com/bwplotka/mdox).
 - Manage deps using [bingo](https://github.com/bwplotka/bingo).
