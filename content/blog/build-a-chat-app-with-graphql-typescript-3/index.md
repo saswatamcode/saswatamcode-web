@@ -7,6 +7,8 @@ images:
 draft: false
 description: Now that our server's ready let's start making our frontend! We won't be adding any CSS in this article, but you can definitely style it later on!
 date: "2021-02-28T05:37:07.322Z"
+contributors:
+    - Saswata Mukherjee
 ---
 
 Now that our server's ready let's start making our frontend! We won't be adding any CSS in this article, but you can definitely style it later on!

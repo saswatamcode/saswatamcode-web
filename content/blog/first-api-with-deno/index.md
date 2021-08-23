@@ -7,6 +7,8 @@ images:
 draft: false
 description: ICYMI, Deno v1.0 has been released! Deno is a simple, modern and secure runtime for JavaScript and TypeScript that uses V8 and is built in Rust. Let's build a really simple REST API which lets us perform CRUD operations on a database of dogs!
 date: "2020-05-19T05:35:07.322Z"
+contributors:
+    - Saswata Mukherjee
 ---
 
 ICYMI, Deno v1.0 has been released!

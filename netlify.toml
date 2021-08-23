@@ -1,3 +1,9 @@
+[[redirects]]
+  from = "/contributors/saswata-mukherjee/"
+  to = "/"
+  status = 200
+  force = true 
+
 [build]
   publish = "website/public"
   functions = "functions"
