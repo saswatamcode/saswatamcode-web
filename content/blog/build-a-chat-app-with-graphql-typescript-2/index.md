@@ -7,6 +7,8 @@ images:
 draft: false
 description: In this part, we'll be adding our subscription to our GraphQL API.
 date: "2021-02-28T05:36:07.322Z"
+contributors:
+    - Saswata Mukherjee
 ---
 
 In this part, we'll be adding our subscription to our GraphQL API.

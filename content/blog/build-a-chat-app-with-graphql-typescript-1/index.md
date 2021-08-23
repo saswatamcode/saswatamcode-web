@@ -7,6 +7,8 @@ images:
 draft: false
 description: If you're a little familiar with [GraphQL](https://graphql.org/), you've probably heard of subscriptions and how useful they are in building real-time applications. In this series of blogs, we're going to build a simple chat application using Node.js and React with GraphQL.
 date: "2021-02-28T05:35:07.322Z"
+contributors:
+    - Saswata Mukherjee
 ---
 
 Hey there!
