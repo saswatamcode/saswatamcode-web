@@ -24,7 +24,7 @@ Product or software documentation can be in the form of a user manual. It can al
 
 To motivate lazy engineers like ourselves or others (especially in open source, where many are not paid to do so!) to focus on documentation, we have to make our process of adding or changing them as frictionless and automatic as possible. Eliminate even minor pain points to a minimum. Reduce the burden. **This is why we created a CLI tool called `mdox`.**
 
-> This blog post was co-written by Saswata (GSOC mentee) and his mentor Bartek during Summer 2021 CNCF mentorship on the Thanos project.
+> This blog post was co-written by Saswata (GSoC mentee) and his mentor Bartek during Summer 2021 CNCF mentorship on the Thanos project.
 
 ## Documentation as a Code
 
@@ -77,7 +77,7 @@ There are alternatives to markdown, such as [AsciiDoc](https://en.wikipedia.org/
 
 However, no matter if code is written in Markdown or not, maintaining correct code examples, formatting, links, frontmatter, and everything in between seems like a herculean task. There are quite a few bumps we found when working with markdown with bigger CNCF communities like Kubernetes, Prometheus and Thanos that makes contributing or adding docs more painful than it should be:
 
-1. Formatting markdown is nice to have as it allows easier editing for future writers. . [Linters](https://github.com/DavidAnson/markdownlint) for markdown that tell you what is wrong do exist, [but fixing must be done manually which is a brittle and time-consuming process](https://github.com/openshift/enhancements/issues/869) as humans do make mistakes. In the end, you don’t want expensive developer time to be spent on ensuring the correct amount of newlines or characters in a single line, do you?
+1. Formatting markdown is nice to have as it allows easier editing for future writers. [Linters](https://github.com/DavidAnson/markdownlint) for markdown that tell you what is wrong do exist, [but fixing must be done manually which is a brittle and time-consuming process](https://github.com/openshift/enhancements/issues/869) as humans do make mistakes. In the end, you don’t want expensive developer time to be spent on ensuring the correct amount of newlines or characters in a single line, do you?
 2. Checking links is another painful process. Link checkers are available but in most cases, they are slow, abuse other websites or are not smart enough to understand your documentation structure.
 3. Code blocks are easy to introduce into docs, but keeping them up-to-date is another problem entirely! [embedmd](https://github.com/campoy/embedmd) alleviates a lot of this by allowing you to copy over content from a file into a code block. But what about command outputs like `--help` commands or something else that needs to be demonstrated, but isn't saved in a file?
 4. Website generators exist, but there are some obstacles. Frontmatter can be really confusing, it needs to be manually crafted for each markdown file. To change one, the writer has to be familiar with the whole project website setup (imagine contributing to such!). Also, in some cases, blank files with just frontmatter need to be added in order to maintain some condition(e.g website sidebar ordering). All those things do not render well on native platforms like GitHub, making it even more confusing and distracting. Furthermore, there is lot’s of magic with links that has to happen. (Things you don’t want to know: Link localization for multi-version docs, relative links change while shifting markdown content from one dir to another, which is a common use-case when dealing with website generators). Ideally, you want all of this to be fully transparent to the documentation contributor or maintainer!
@@ -100,13 +100,13 @@ Formatted markdown allows writers to understand documentation quickly and avoids
 
 `fmt` command ensures a smooth automatic experience for the contributor that also does not compromise the markdown quality of the project. Win-win situation!
 
-> Kudos to some Go developers who passionately started `[Kunde21/markdownfmt](https://github.com/Kunde21/markdownfmt)` fork, our tool used internally for formatting, with [goldmark](https://github.com/yuin/goldmark) parser help You might be surprised, but parsing and formatting markdown is quite advanced engineering in itself! We now maintain it, together with [https://github.com/karelbilek](https://github.com/karelbilek), [https://github.com/Kunde21](https://github.com/Kunde21) - a great open-source example!
+> Kudos to some Go developers who passionately started [Kunde21/markdownfmt](https://github.com/Kunde21/markdownfmt) fork, our tool used internally for formatting, with [goldmark](https://github.com/yuin/goldmark) parser help You might be surprised, but parsing and formatting markdown is quite advanced engineering in itself! We now maintain it, together with [https://github.com/karelbilek](https://github.com/karelbilek), [https://github.com/Kunde21](https://github.com/Kunde21) - a great open-source example!
 
 ### Link Checking
 
 Broken links are super annoying, especially in software documentation. Trying to figure out the correct link as you're trying to learn something else is a distracting context switch. We can mitigate this by using a markdown link checker. However, most currently available link checkers seem to be underperforming, in a few ways:
 
-* They just keep on visiting links. This results in obvious rate-limiting ("Too many requests" errors) especially from very often linked resources like GitHub (Just imagine CHANGELOG (: ). You can fully disable checking any GitHub link, but then might have surprises later on! You can enable retries or dev APIs in those cases, but still, it would either take a huge time or will be hard to set up.
+* They just keep on visiting links. This results in obvious rate-limiting ("Too many requests" errors) especially from very often linked resources like GitHub (Just imagine CHANGELOG (: ). You can fully disable checking such links, but then might have surprises later on! You can enable retries or dev APIs in those cases, but still, it would either take a huge time or will be hard to set up.
 * Some skip over relative links in markdown so those would still stay broken.
 * Some cannot be run locally at all so a contributor cannot check before pushing and has to wait for CI.
 
@@ -116,7 +116,7 @@ This is why in practice, projects either disable link checking or add them as so
 
 * Relative links are checked.
 * Links are gathered in a parsing and formatting routine.
-* Links are checked concurrently
+* Links are checked concurrently.
 * All links are “single-flighted” (the same links are checked once) and cached (can be even cached persistently using SQLite), meaning we do as minimal amount of slow and expensive link checking as needed.
 * mdox has rich retry validation techniques that understand various response headers from websites e.g "Retry-After" HTTP header. It retries immediately for other status codes like 301, 307, and 503 as well.
 * You can skip certain domains/paths if you want.
