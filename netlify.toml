@@ -4,6 +4,12 @@
   status = 200
   force = true 
 
+[[redirects]]
+  from = "contributors/bartek-plotka/"
+  to = "https://www.bwplotka.dev/"
+  status = 200
+  force = true 
+
 [build]
   publish = "website/public"
   functions = "functions"
