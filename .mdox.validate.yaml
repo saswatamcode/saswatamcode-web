@@ -7,3 +7,5 @@ validators:
     type: 'ignore'
   - regex: 'deno\.land'
     type: 'ignore'
+  - regex: 'twitter\.com'
+    type: 'ignore'
