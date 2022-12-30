@@ -321,6 +321,6 @@ There you go!
 
 If you'd like to dig deeper into React Router and discover all the cool stuff you can do with it, read the official docs,
 
-[React Router Docs](https://reactrouter.com/web/guides/quick-start)
+[React Router Docs](https://reactrouter.com/en/main/start/tutorial)
 
 For any queries reach out to my [socials](https://twitter.com/saswatamcode) or [GitHub](https://github.com/saswatamcode)!
