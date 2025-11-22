@@ -1,0 +1,202 @@
+{{- /* Comprehensive SEO Meta Tags */ -}}
+
+{{- /* Basic SEO Meta Tags */ -}}
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
+<meta name="author" content="{{ site.Params.author | default "Saswata Mukherjee" }}" />
+
+{{- /* Enhanced Open Graph Tags */ -}}
+{{- /* Include the theme's default opengraph partial first */ -}}
+{{ partial "opengraph.html" . }}
+
+{{- /* Add image dimensions for better social card rendering */ -}}
+{{- with partial "_funcs/get-page-images" . }}
+  {{- range . | first 1 }}
+    {{- with .Width }}
+      <meta property="og:image:width" content="{{ . }}">
+    {{- end }}
+    {{- with .Height }}
+      <meta property="og:image:height" content="{{ . }}">
+    {{- end }}
+  {{- end }}
+{{- else }}
+  {{- /* Default image dimensions for cover.png */ -}}
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+{{- end }}
+
+{{- /* Twitter Card Tags */ -}}
+<meta name="twitter:card" content="summary_large_image" />
+{{- with site.Params.twitterHandle }}
+  <meta name="twitter:site" content="@{{ . }}" />
+  <meta name="twitter:creator" content="@{{ . }}" />
+{{- end }}
+
+{{- /* Twitter title - use page title or site title */ -}}
+{{- with or .Title site.Title site.Params.title }}
+  <meta name="twitter:title" content="{{ . }}" />
+{{- end }}
+
+{{- /* Twitter description */ -}}
+{{- with or .Description .Summary site.Params.description | plainify | htmlUnescape }}
+  <meta name="twitter:description" content="{{ trim . "\n\r\t " }}" />
+{{- end }}
+
+{{- /* Twitter image */ -}}
+{{- with partial "_funcs/get-page-images" . }}
+  {{- range . | first 1 }}
+    <meta name="twitter:image" content="{{ .Permalink }}" />
+    {{- with .Params.alt }}
+      <meta name="twitter:image:alt" content="{{ . }}" />
+    {{- end }}
+  {{- end }}
+{{- else }}
+  {{- if templates.Exists "partials/head/og-image.html" }}
+    {{- $ogImage := partial "head/og-image.html" . }}
+    {{- with $ogImage }}
+      {{- $ogImageStr := printf "%s" . }}
+      {{- with $ogImageStr }}
+        <meta name="twitter:image" content="{{ . }}" />
+      {{- end }}
+    {{- end }}
+  {{- end }}
+{{- end }}
+
+{{- /* JSON-LD Structured Data */ -}}
+{{- if .IsPage }}
+  {{- /* Article/Blog Post Schema */ -}}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": {{ .Title | jsonify }},
+    {{- with .Description }}
+    "description": {{ . | plainify | jsonify }},
+    {{- end }}
+    "url": {{ .Permalink | jsonify }},
+    {{- $ISO8601 := "2006-01-02T15:04:05-07:00" }}
+    {{- with .PublishDate }}
+    "datePublished": {{ .Format $ISO8601 | jsonify }},
+    {{- end }}
+    {{- with .Lastmod }}
+    "dateModified": {{ .Format $ISO8601 | jsonify }},
+    {{- end }}
+    "author": {
+      "@type": "Person",
+      "name": {{ site.Params.author | default "Saswata Mukherjee" | jsonify }},
+      {{- with site.Params.twitterHandle }}
+      "url": "https://twitter.com/{{ . }}"
+      {{- else }}
+      "url": {{ site.BaseURL | jsonify }}
+      {{- end }}
+    },
+    "publisher": {
+      "@type": "Person",
+      "name": {{ site.Title | jsonify }},
+      "logo": {
+        "@type": "ImageObject",
+        "url": {{ index (site.Params.images | default (slice "/images/cover.png")) 0 | absURL | jsonify }}
+      }
+    },
+    {{- with partial "_funcs/get-page-images" . }}
+      {{- range . | first 1 }}
+    "image": {
+      "@type": "ImageObject",
+      "url": {{ .Permalink | jsonify }},
+      {{- with .Width }}
+      "width": {{ . }},
+      {{- end }}
+      {{- with .Height }}
+      "height": {{ . }}
+      {{- end }}
+    },
+      {{- end }}
+    {{- else }}
+    "image": {
+      "@type": "ImageObject",
+      "url": {{ index (site.Params.images | default (slice "/images/cover.png")) 0 | absURL | jsonify }},
+      "width": 1200,
+      "height": 630
+    },
+    {{- end }}
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": {{ .Permalink | jsonify }}
+    },
+    {{- with .GetTerms "tags" }}
+    "keywords": [
+      {{- $len := len . }}
+      {{- range $index, $tag := . }}
+        {{- $tag.Page.Title | plainify | jsonify }}{{ if lt (add $index 1) $len }},{{ end }}
+      {{- end }}
+    ],
+    {{- end }}
+    "inLanguage": {{ or site.Language.LanguageCode "en-US" | jsonify }}
+  }
+  </script>
+{{- else if .IsHome }}
+  {{- /* Home Page / Person Schema */ -}}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": {{ site.Params.author | default "Saswata Mukherjee" | jsonify }},
+    "url": {{ site.BaseURL | jsonify }},
+    {{- with site.Params.description }}
+    "description": {{ . | plainify | jsonify }},
+    {{- end }}
+    "image": {{ index (site.Params.images | default (slice "/images/cover.png")) 0 | absURL | jsonify }},
+    "jobTitle": "Senior Software Engineer",
+    "sameAs": [
+      {{- $socials := slice }}
+      {{- with site.Params.social }}
+        {{- range . }}
+          {{- if and .url (or (in .url "http://") (in .url "https://")) }}
+            {{- $socials = $socials | append .url }}
+          {{- end }}
+        {{- end }}
+      {{- end }}
+      {{- $len := len $socials }}
+      {{- range $index, $url := $socials }}
+        {{ $url | jsonify }}{{ if lt (add $index 1) $len }},{{ end }}
+      {{- end }}
+    ]
+  }
+  </script>
+
+  {{- /* Website Schema */ -}}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "url": {{ site.BaseURL | jsonify }},
+    "name": {{ site.Title | jsonify }},
+    {{- with site.Params.description }}
+    "description": {{ . | plainify | jsonify }},
+    {{- end }}
+    "inLanguage": {{ or site.Language.LanguageCode "en-US" | jsonify }}
+  }
+  </script>
+{{- else }}
+  {{- /* Generic WebPage Schema */ -}}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "url": {{ .Permalink | jsonify }},
+    "name": {{ .Title | jsonify }},
+    {{- with .Description }}
+    "description": {{ . | plainify | jsonify }},
+    {{- end }}
+    "inLanguage": {{ or site.Language.LanguageCode "en-US" | jsonify }},
+    "isPartOf": {
+      "@type": "WebSite",
+      "url": {{ site.BaseURL | jsonify }},
+      "name": {{ site.Title | jsonify }}
+    }
+  }
+  </script>
+{{- end }}
+
+{{- /* Theme Color for Browser UI */ -}}
+<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)" />
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
