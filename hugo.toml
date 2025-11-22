@@ -3,9 +3,6 @@ languageCode = 'en-us'
 title = '@saswatamcode'
 theme = 'typo'
 
-# Google analytics code
-# googleAnalytics = "G-xxxxxxxxx"
-
 [taxonomies]
 tag = 'tags'
 
@@ -27,8 +24,8 @@ Senior Software Engineer at [Red Hat](https://www.redhat.com/en) | [Thanos](http
 """
 
 # Collection to display on home
-homeCollectionTitle = 'Posts'
-homeCollection = 'posts'
+# homeCollectionTitle = 'Posts'
+# homeCollection = 'posts'
 
 # Lists parameters
 paginationSize = 100
