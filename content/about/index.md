@@ -1,12 +1,12 @@
 ---
 title: About Me!
+images:
+    - me.jpg
 draft: false
 date: ""
-author: false
 contributors: []
+author: false
 ---
-
-![](/me.jpeg)
 
 Hi there! 👋
 
