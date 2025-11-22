@@ -1,23 +1,9 @@
-[[redirects]]
-  from = "/contributors/saswata-mukherjee/"
-  to = "/"
-  status = 200
-  force = true 
-
-[[redirects]]
-  from = "contributors/bartek-plotka/"
-  to = "https://www.bwplotka.dev/"
-  status = 200
-  force = true 
-
 [build]
-  publish = "website/public"
+  publish = "public"
   functions = "functions"
 
 [build.environment]
   # HUGO_VERSION = "..." is set by bingo which allows reproducible local environment.
-  NODE_VERSION = "15.5.1"
-  NPM_VERSION = "7.3.0"
 
 [context.production]
   command = "(env && make web) || (sleep 30; false)"

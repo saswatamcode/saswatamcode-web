@@ -1,0 +1,8 @@
+/* Remove SVG title tooltips - SVG titles can't be hidden with display:none */
+.social-icons svg {
+    pointer-events: none;
+}
+
+.social-icons a {
+    pointer-events: auto;
+}

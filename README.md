@@ -2,13 +2,11 @@
 
 # saswatamcode-web
 
-A personal blog website built with Hugo using [Doks theme](https://getdoks.org/).
-
-Planning to migrate to Next.js + Tailwind soon(see [here](https://github.com/saswatamcode/saswatamcode-web/tree/next-migration)).
+A personal blog website built with Hugo using [typo theme](https://github.com/tomfran/typo).
 
 Visit https://saswatamcode.tech!
 
-![](content/cover.png)
+![](static/images/cover.png)
 
 ## Run
 - Clone into repo
