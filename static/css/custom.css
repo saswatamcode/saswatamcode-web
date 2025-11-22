@@ -6,3 +6,10 @@
 .social-icons a {
     pointer-events: auto;
 }
+
+/* Make header title smaller on mobile devices */
+@media (max-width: 768px) {
+    .header-title {
+        font-size: 2em;
+    }
+}
