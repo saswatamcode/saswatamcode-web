@@ -1,0 +1,12 @@
+{{- if (or .IsHome .IsPage) -}}
+  {{- with resources.GetMatch "images/og-image.{webp,png,jpg}" -}}
+    {{- .RelPermalink -}}
+  {{- else -}}
+    {{- /* Use site params images or fallback to cover.png */ -}}
+    {{- with site.Params.images -}}
+      {{- index . 0 | absURL -}}
+    {{- else -}}
+      {{- absURL "/images/cover.png" -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}

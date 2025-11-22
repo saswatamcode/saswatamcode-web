@@ -16,5 +16,5 @@ Some public talks that I performed or co-performed at various conferences/podcas
 | Cloud Native Club Project Spotlight: Thanos                                               | Virtual                               | August, 2024    | [Watch](https://www.youtube.com/live/ELj8vQSLoGU)         |
 | Thanos' Infinity Stones and How You Can Operate Them!                                     | KubeCon EU, Paris                     | March, 2024     | [Watch](https://youtu.be/e8kvX6mRlyE)                     |
 | Thanos Project Updates                                                                    | ThanosCon EU, KubeCon EU, Paris       | March, 2024     | [Watch](https://youtu.be/wmNtCj5D4_A)                     |
-| Metrics at Full Throttle: Intro and Deep Dive Into Thanos                                 | KubeCon EU, Amsterdam                     | May, 2023       | [Watch](https://youtu.be/2GokLB5_VfY)                     |
+| Metrics at Full Throttle: Intro and Deep Dive Into Thanos                                 | KubeCon EU, Amsterdam                 | May, 2023       | [Watch](https://youtu.be/2GokLB5_VfY)                     |
 | Fleeting Metrics: Monitoring Short-lived or Serverless Jobs with Prometheus               | PrometheusDay EU, KubeCon EU Valencia | May, 2022       | [Watch](https://youtu.be/rt4JiK995s8)                     |

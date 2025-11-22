@@ -6,7 +6,9 @@
 
 {{/* Profile Picture - centered */}}
 <div style="display: flex; justify-content: center; margin-bottom: 2rem;">
-    <img src="/logo.png" alt="Profile Picture" style="border-radius: 50%; width: 200px; height: 200px; object-fit: cover; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+    <a href="https://github.com/saswatamcode" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
+        <img src="/logo.png" alt="Profile Picture" style="border-radius: 50%; width: 200px; height: 200px; object-fit: cover; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); cursor: pointer;">
+    </a>
 </div>
 
 {{ if or .Site.Params.homeIntroTitle .Site.Params.homeIntroContent }}

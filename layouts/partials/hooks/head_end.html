@@ -1,1 +1,15 @@
 <link rel="stylesheet" href="{{ "css/custom.css" | relURL }}">
+
+{{/* Twitter Card meta tags */}}
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@saswatamcode">
+<meta name="twitter:creator" content="@saswatamcode">
+{{- with or .Title site.Title site.Params.title }}
+<meta name="twitter:title" content="{{ . }}">
+{{- end }}
+{{- with or .Description .Summary site.Params.description | plainify | htmlUnescape }}
+<meta name="twitter:description" content="{{ trim . "\n\r\t " }}">
+{{- end }}
+{{- with partial "head/og-image.html" . }}
+<meta name="twitter:image" content="{{ absURL . }}">
+{{- end }}

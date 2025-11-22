@@ -10,6 +10,9 @@ tag = 'tags'
 # Meta description
 description = "Senior Software Engineer at Red Hat | Thanos, Perses maintainer | Prometheus team member | Go, Observability, Distributed Systems & OSS enthusiast | GSoC'21 @ CNCF(under the Thanos project) | Computer Science and Engineering grad"
 
+# Default OpenGraph image for social media sharing
+images = ["/images/cover.png"]
+
 # Appearance settings
 theme = 'auto'
 colorPalette = 'default'
