@@ -2,6 +2,8 @@
 title: Public Talks & Presentations
 draft: false
 date: ""
+author: false
+contributors: []
 ---
 
 Some public talks that I performed or co-performed at various conferences/podcasts! 🤗 (Will try to keep them as updated as I can)

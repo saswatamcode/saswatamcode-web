@@ -36,9 +36,9 @@
           {{ end }}
           <div>
             {{- /* Display single author or contributors */}}
-            {{ if .Param "contributors" }}
+            {{- $contributors := .Param "contributors" }}
+            {{- if and $contributors (gt (len $contributors) 0) }}
               <p class="author">
-                {{- $contributors := .Param "contributors" }}
                 {{- $contributorsData := $.Site.Data.contributors }}
                 {{- range $index, $contributor := $contributors }}
                   {{- if $index }}, {{ end }}
@@ -50,10 +50,12 @@
                   {{- end }}
                 {{- end }}
               </p>
-            {{ else }}
-              {{ with .Param "author" }}
-              <p class="author"> {{- .}} </p>
-              {{ end }}
+            {{ else if or (not $contributors) (eq (len $contributors) 0) }}
+              {{- if not $contributors }}
+                {{ with .Param "author" }}
+                <p class="author"> {{- .}} </p>
+                {{ end }}
+              {{- end }}
             {{ end }}
             <p class="single-date">
             {{- with .Date }}
