@@ -1,0 +1,69 @@
+{{ define "main" }}
+
+{{ .Content }}
+
+{{/* Intro summary section */}}
+
+{{/* Profile Picture - centered */}}
+<div style="display: flex; justify-content: center; margin-bottom: 2rem;">
+    <img src="/logo.png" alt="Profile Picture" style="border-radius: 50%; width: 200px; height: 200px; object-fit: cover; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+</div>
+
+{{ if or .Site.Params.homeIntroTitle .Site.Params.homeIntroContent }}
+<div class="intro">
+    {{ with .Site.Params.homeIntroTitle }}
+    <h1>{{ . }}</h1>
+    {{ end }}
+
+    {{ with .Site.Params.homeIntroContent }}
+    <p>{{ . | markdownify }}</p>
+    {{ end }}
+</div>
+{{ end }}
+
+{{/* Social Icons */}}
+
+{{ with site.Params.social }}
+<div class="social-icons">
+    {{- range . }}
+    <a href="{{ trim .url " " | safeURL }}" target="_blank"
+        rel="noopener noreferrer me"
+        aria-label="{{ (.title | default .name) | title }}"
+        data-title="{{ (.title | default .name) | title }}">
+        <span title="{{ (.title | default .name) | title }}">
+            {{ partial "svg.html" . }}
+        </span>
+    </a>
+    {{- end }}
+</div>
+{{ end }}
+
+{{/* Collection Section */}}
+
+{{ if .Site.Params.homeCollection }}
+
+<div class="list-container">
+    {{ with .Site.Params.homeCollectionTitle}}
+    <h1> {{ . }} </h1>
+    {{ end }}
+
+    {{ $pages := where .Site.RegularPages "Section" .Site.Params.homeCollection
+    }}
+
+    {{ $paginationSize := 1}}
+    {{ if (gt .Site.Params.paginationSize 0) }}
+    {{ $paginationSize = .Site.Params.paginationSize }}
+    {{ end }}
+
+    {{ $paginator := .Paginate $pages $paginationSize }}
+
+    {{ range $index, $page := $paginator.Pages }}
+    {{ partial "post-entry.html" $page}}
+    {{ end }}
+
+    {{ partial "pagination-controls.html" $paginator}}
+
+    {{ end }}
+</div>
+
+{{ end }}

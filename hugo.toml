@@ -1,0 +1,110 @@
+baseURL = 'https://saswatamcode.tech/'
+languageCode = 'en-us'
+title = '@saswatamcode'
+theme = 'typo'
+
+# Google analytics code
+# googleAnalytics = "G-xxxxxxxxx"
+
+[taxonomies]
+tag = 'tags'
+
+[params]
+# Meta description
+description = "Senior Software Engineer at Red Hat | Thanos, Perses maintainer | Prometheus team member | Go, Observability, Distributed Systems & OSS enthusiast | GSoC'21 @ CNCF(under the Thanos project) | Computer Science and Engineering grad"
+
+# Appearance settings
+theme = 'auto'
+colorPalette = 'default'
+hideHeader = false
+
+# Intro on main page, content is markdown
+homeIntroTitle = 'Saswata Mukherjee'
+homeIntroContent = """
+Senior Software Engineer at [Red Hat](https://www.redhat.com/en) | [Thanos](https://thanos.io/tip/thanos/maintainers.md/) & [Perses community-mixins](https://github.com/perses/community-mixins) maintainer \n
+[Prometheus](https://prometheus.io/governance/#team-members) team member | Go, Observability, Distributed Systems & OSS enthusiast \n
+[GSoC'21](https://summerofcode.withgoogle.com/archive/2021/projects/5145457193385984) @ CNCF(under the Thanos project) | Computer Science and Engineering grad \n
+"""
+
+# Collection to display on home
+homeCollectionTitle = 'Posts'
+homeCollection = 'posts'
+
+# Lists parameters
+paginationSize = 100
+listSummaries = false
+listDateFormat = '2 Jan 2006'
+
+# Breadcrumbs
+[params.breadcrumbs]
+enabled = true
+showCurrentPage = true
+home = "Home"
+
+# Social icons
+[[params.social]]
+name = "github"
+title = "GitHub"
+url = "https://github.com/saswatamcode"
+
+[[params.social]]
+name = "linkedin"
+title = "LinkedIn"
+url = "https://www.linkedin.com/in/saswatamcode/"
+
+[[params.social]]
+title = "Email"
+name = "gmail"
+url = "mailto:saswataminsta@yahoo.com"
+
+[[params.social]]
+title = "CNCF Slack"
+name = "slack"
+url = "https://cloud-native.slack.com/team/U01BDJLJK40"
+
+[[params.social]]
+title = "Bluesky"
+name = "bluesky"
+url = "https://bsky.app/profile/saswatamcode.tech"
+
+[[params.social]]
+title = "Twitter"
+name = "twitter"
+url = "https://twitter.com/saswatamcode"
+
+[[params.social]]
+title = "Resume"
+name = "libreofficewriter"
+url = "/Saswata_Mukherjee_Resume.pdf"
+
+# Main menu pages
+[[params.menu]]
+name = "home"
+url = "/"
+
+[[params.menu]]
+name = "posts"
+url = "/posts"
+
+[[params.menu]]
+name = "about"
+url = "/about"
+
+[[params.menu]]
+name = "talks"
+url = "/talks"
+
+# Syntax highlight on code blocks
+[markup]
+[markup.highlight]
+style = 'catppuccin-mocha'
+
+# Giscus comments
+[params.giscus]
+enable = false
+repo = "user/repo"
+repoid = "repoId"
+category = "General"
+categoryid = "categoryId"
+mapping = "pathname"
+theme = "preferred_color_scheme"

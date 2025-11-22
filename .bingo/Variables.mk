@@ -17,11 +17,11 @@ GO     ?= $(shell which go)
 #	@echo "Running hugo"
 #	@$(HUGO) <flags/args..>
 #
-HUGO := $(GOBIN)/hugo-v0.80.0
+HUGO := $(GOBIN)/hugo-v0.152.2
 $(HUGO): $(BINGO_DIR)/hugo.mod
 	@# Install binary/ries using Go 1.14+ build command. This is using bwplotka/bingo-controlled, separate go module with pinned dependencies.
-	@echo "(re)installing $(GOBIN)/hugo-v0.80.0"
-	@cd $(BINGO_DIR) && CGO_ENABLED=1 $(GO) build -tags=extended -mod=mod -modfile=hugo.mod -o=$(GOBIN)/hugo-v0.80.0 "github.com/gohugoio/hugo"
+	@echo "(re)installing $(GOBIN)/hugo-v0.152.2"
+	@cd $(BINGO_DIR) && CGO_ENABLED=1 $(GO) build -tags=extended,withdeploy -mod=mod -modfile=hugo.mod -o=$(GOBIN)/hugo-v0.152.2 "github.com/gohugoio/hugo"
 
 MDOX := $(GOBIN)/mdox-v0.2.2-0.20210727111744-6c9c3f73f728
 $(MDOX): $(BINGO_DIR)/mdox.mod

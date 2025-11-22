@@ -13,14 +13,14 @@ jobs:
     name: Blogs formatting and link checking.
     steps:
       - name: Checkout code into the Go module directory.
-        uses: actions/checkout@v2
+        uses: actions/checkout@v6
 
       - name: Install Go
-        uses: actions/setup-go@v2
+        uses: actions/setup-go@v6
         with:
-          go-version: 1.15.x
+          go-version: 1.25.x
 
-      - uses: actions/cache@v1
+      - uses: actions/cache@v4
         with:
           path: ~/go/pkg/mod
           key: ${{ runner.os }}-go-${{ hashFiles('**/go.sum') }}

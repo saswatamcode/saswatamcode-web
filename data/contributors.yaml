@@ -1,0 +1,8 @@
+# Map contributor names to their websites/profiles
+# If a contributor is not listed here, their name will be displayed without a link
+
+"Saswata Mukherjee":
+  url: "/"
+
+"Bartek Plotka":
+  url: "https://www.bwplotka.dev/"
