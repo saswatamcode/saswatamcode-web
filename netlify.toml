@@ -4,6 +4,7 @@
 
 [build.environment]
   # HUGO_VERSION = "..." is set by bingo which allows reproducible local environment.
+  GO_VERSION = "1.25.3"
 
 [context.production]
   command = "(env && make web) || (sleep 30; false)"
