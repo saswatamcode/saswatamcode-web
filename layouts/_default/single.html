@@ -12,6 +12,18 @@
         {{- /* Title and Summary */}}
 
         <h1 class="single-title">{{ .Title }}</h1>
+
+        {{- /* Cover Image */}}
+        {{- if .Params.images }}
+          {{- $imageName := index .Params.images 0 }}
+          {{- $image := .Resources.GetMatch $imageName }}
+          {{- if $image }}
+          <div class="single-cover-image">
+            <img src="{{ $image.RelPermalink }}" alt="{{ .Title }}" />
+          </div>
+          {{- end }}
+        {{- end }}
+
         {{- with .Param "summary" }}
         <p class="single-summary">{{ . | markdownify }}</p>
         {{- end }}
