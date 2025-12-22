@@ -10,7 +10,7 @@ Some public talks that I performed or co-performed at various conferences/podcas
 
 | Title                                                                                     | Event                                 | Month           | Recording                                                 |
 |-------------------------------------------------------------------------------------------|---------------------------------------|-----------------|-----------------------------------------------------------|
-| No Jsonnet, No Problem! Prometheus in Perses, Powered by Go                               | PromCon EU 2025 EU, Munich            | October, 2025   | [Watch](https://www.youtube.com/live/8h99_mfY6U4?t=10262) |
+| No Jsonnet, No Problem! Prometheus in Perses, Powered by Go                               | PromCon EU 2025 EU, Munich            | October, 2025   | [Watch](https://youtu.be/fImIhZYXpfM) |
 | Prometheus Deep Dive: What's New in v3.0 and Beyond                                       | KubeCon EU, London                    | April, 2025     | [Watch](https://youtu.be/KS_rGWazTio)                     |
 | GitOps Guide to the Galaxy (Ep. 84): Multicluster Observability Red Hat                   | Virtual                               | October, 2024   | [Watch](https://www.youtube.com/live/fZh4ylyXkGM)         |
 | Observability Metrics - Feat. Prometheus, Cortex, and Thanos (You Choose!, Ch. 4, Ep. 03) | Virtual                               | September, 2024 | [Watch](https://www.youtube.com/live/UXC9w3R9k8M)         |
